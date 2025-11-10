@@ -1,2 +1,2 @@
-# Haunted-House-VR
+# Haunted House VR
 
