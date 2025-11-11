@@ -26,7 +26,6 @@ Explore a mysterious abandoned mansion full of secrets, scares, and an eerie atm
 
 ## Controls and Interaction
 
-> *(Briefly explain how the player interacts with the environment. For example:)*  
 - **Movement:** Continuous using joystick  
 - **Interaction:** Press trigger or grip button  
 
