@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{ea5b1ce0-44e6-4301-9f2a-1fad1fb268f5}">
+		<property name="assetPath">
+			<value>AudioJuego/SFX/Breath.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>13.800000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7c9c9fe5-ab57-441f-805f-39351efdc682}</destination>
+		</relationship>
+	</object>
+</objects>

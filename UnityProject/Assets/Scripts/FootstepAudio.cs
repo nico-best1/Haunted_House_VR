@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
-
-[RequireComponent(typeof(AudioSource))]
 public class FootstepAudio : MonoBehaviour
 {
     public ActionBasedContinuousMoveProvider moveProvider;
