@@ -1,14 +1,14 @@
 using Unity.XR.CoreUtils;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class Event1 : MonoBehaviour
 {
     public GameObject wallToDisappear;
     public GameObject door;
-    public Transform playerHead; // Esto es la cámara del VR rig (HMD)
-    public Transform wallDirectionReference; // Un punto enfrente de la pared, hacia donde debería mirar para verla
-    public float maxViewAngle = 60f; // Cuánto puede desviarse la mirada para que NO la esté viendo
+    public Transform playerHead; // Esto es la cï¿½mara del VR rig (HMD)
+    public Transform wallDirectionReference; // Un punto enfrente de la pared, hacia donde deberï¿½a mirar para verla
+    public float maxViewAngle = 60f; // Cuï¿½nto puede desviarse la mirada para que NO la estï¿½ viendo
     public AudioClip doorClosed; // Sonido que se reproduce al desaparecer la pared
     public GameObject gramophone;
 
@@ -35,11 +35,11 @@ public class Event1 : MonoBehaviour
 
             if (angle > maxViewAngle)
             {
-                door.gameObject.transform.rotation = Quaternion.Euler(-90, 90, 180); // Resetea la rotación de la puerta
+                door.gameObject.transform.rotation = Quaternion.Euler(-90, 90, 180); // Resetea la rotaciï¿½n de la puerta
                 door.GetComponent<Rigidbody>().isKinematic = true;
-                door.GetComponent<XRGrabInteractable>().enabled = false; // Desactiva la puerta para que no se pueda abrir
+                door.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().enabled = false; // Desactiva la puerta para que no se pueda abrir
                 SoundManager.Instance.PlaySFX(doorClosed);
-                gramophone.GetComponent<AudioSource>().Stop(); // Desactiva el gramófono 
+                gramophone.GetComponent<AudioSource>().Stop(); // Desactiva el gramï¿½fono 
                 wallToDisappear.SetActive(false);
                 break;
             }

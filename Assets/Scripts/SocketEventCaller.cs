@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class SocketEventCaller : MonoBehaviour
 {
@@ -7,7 +7,7 @@ public class SocketEventCaller : MonoBehaviour
 
     private void Start()
     {
-        var socket = GetComponent<XRSocketInteractor>();
+        var socket = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor>();
         socket.selectEntered.AddListener((args) =>
         {
             puzzleManager.CheckPuzzle();

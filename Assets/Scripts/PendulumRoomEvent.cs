@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class PendulumRoomEvent : MonoBehaviour
 {
@@ -21,7 +21,7 @@ public class PendulumRoomEvent : MonoBehaviour
     public float minFlickerInterval = 0.05f;
     public float maxFlickerInterval = 0.2f;
 
-    public AudioSource flickerAudio;  // Si aún quieres un audio extra para el parpadeo
+    public AudioSource flickerAudio;  // Si aï¿½n quieres un audio extra para el parpadeo
 
     public Transform playerHead;
 
@@ -90,7 +90,7 @@ public class PendulumRoomEvent : MonoBehaviour
         {
             entryDoor.transform.rotation = Quaternion.Euler(-90, 0, 180);
             entryDoor.GetComponent<Rigidbody>().isKinematic = true;
-            entryDoor.GetComponent<XRGrabInteractable>().enabled = false;
+            entryDoor.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().enabled = false;
         }
 
         if (entryDoorAudio != null)
@@ -109,7 +109,7 @@ public class PendulumRoomEvent : MonoBehaviour
         StartCoroutine(MoveDrawers());
 
         float duration = 20f;
-        StartCoroutine(FlickerLights()); // Llamamos a la nueva lógica de parpadeo
+        StartCoroutine(FlickerLights()); // Llamamos a la nueva lï¿½gica de parpadeo
 
         float buildUpStartTime = duration - buildUpTension.clip.length;
         StartCoroutine(PlayBuildUpAfterDelay(buildUpStartTime));
@@ -178,7 +178,7 @@ public class PendulumRoomEvent : MonoBehaviour
             }
 
 
-            yield return new WaitForSeconds(Random.Range(1f, 2f));  // Pausa más larga para evitar saturación
+            yield return new WaitForSeconds(Random.Range(1f, 2f));  // Pausa mï¿½s larga para evitar saturaciï¿½n
         }
     }
 
@@ -245,7 +245,7 @@ public class PendulumRoomEvent : MonoBehaviour
                     var rb = exitDoor.GetComponent<Rigidbody>();
                     if (rb != null) rb.isKinematic = true;
 
-                    var grab = exitDoor.GetComponent<XRGrabInteractable>();
+                    var grab = exitDoor.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
                     if (grab != null) grab.enabled = false;
                 }
                 pendulum.GetComponent<PendulumIdleController>()?.StartPendulum();

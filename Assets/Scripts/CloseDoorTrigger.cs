@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class CloseDoorTrigger : MonoBehaviour
 {
@@ -36,7 +36,7 @@ public class CloseDoorTrigger : MonoBehaviour
             if (rb != null)
                 rb.isKinematic = true;
 
-            XRGrabInteractable grab = door.GetComponent<XRGrabInteractable>();
+            UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab = door.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
             if (grab != null)
                 grab.enabled = false;
         }

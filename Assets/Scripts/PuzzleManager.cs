@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
+// asegúrate del namespace correcto
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -18,7 +20,7 @@ public class PuzzleManager : MonoBehaviour
         // No hacer nada si no están los 3 ocupados
         foreach (var socket in sockets)
         {
-            if (socket.GetOldestInteractableSelected() == null)
+            if (!socket.hasSelection)  // usa la propiedad hasSelection
                 return;
         }
 
@@ -26,8 +28,16 @@ public class PuzzleManager : MonoBehaviour
         bool correct = true;
         for (int i = 0; i < sockets.Length; i++)
         {
-            IXRSelectInteractable interactable = sockets[i].GetOldestInteractableSelected();
-            if (interactable.transform.name != correctOrder[i])
+            XRSocketInteractor socket = sockets[i];
+            IXRSelectInteractable interactable = null;
+
+            // Versión segura para obtener el seleccionado
+            if (socket.interactablesSelected.Count > 0)
+                interactable = socket.interactablesSelected[0];
+            // Alternativamente: interactable = socket.firstInteractableSelected;
+
+            if (interactable == null ||
+                interactable.transform.name != correctOrder[i])
             {
                 correct = false;
                 break;
@@ -37,8 +47,12 @@ public class PuzzleManager : MonoBehaviour
         if (correct)
         {
             SoundManager.Instance.PlaySFX(successClip);
-            door.GetComponent<Rigidbody>().isKinematic = false;
-            door.GetComponent<XRGrabInteractable>().enabled = true;
+            var rbDoor = door.GetComponent<Rigidbody>();
+            if (rbDoor != null) rbDoor.isKinematic = false;
+
+            var grabDoor = door.GetComponent<XRGrabInteractable>();
+            if (grabDoor != null) grabDoor.enabled = true;
+
             puzzleSolved = true;
             DisableObjectInteractions();
         }
@@ -48,12 +62,14 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
-
     private void DisableObjectInteractions()
     {
         foreach (var socket in sockets)
         {
-            IXRSelectInteractable interactable = socket.GetOldestInteractableSelected();
+            IXRSelectInteractable interactable = null;
+            if (socket.interactablesSelected.Count > 0)
+                interactable = socket.interactablesSelected[0];
+
             if (interactable != null)
             {
                 GameObject obj = interactable.transform.gameObject;

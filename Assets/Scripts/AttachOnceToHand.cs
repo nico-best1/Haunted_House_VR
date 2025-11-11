@@ -4,14 +4,14 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class AttachOnceToHand : MonoBehaviour
 {
-    private XRGrabInteractable grabInteractable;
+    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
     private bool isLocked = false;
     public GameObject Instructions1;
     public GameObject Instructions2;
 
     void Awake()
     {
-        grabInteractable = GetComponent<XRGrabInteractable>();
+        grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         if (grabInteractable != null)
         {
             grabInteractable.selectEntered.AddListener(OnSelectEntered);
@@ -44,7 +44,7 @@ public class AttachOnceToHand : MonoBehaviour
         if (grabInteractable.transform == null || grabInteractable.interactionManager == null)
             return;
 
-        if (interactor is IXRSelectInteractor selectInteractor)
+        if (interactor is UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor selectInteractor)
         {
             if (selectInteractor.IsSelecting(grabInteractable))
                 return;

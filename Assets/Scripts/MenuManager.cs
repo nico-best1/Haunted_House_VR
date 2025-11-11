@@ -9,8 +9,8 @@ public class MenuManager : MonoBehaviour
     public GameObject menuCanvas;
     public ActionBasedContinuousMoveProvider moveProvider;
     public ActionBasedContinuousTurnProvider turnProvider;
-    public XRRayInteractor rightHandRayInteractor;
-    public XRRayInteractor leftHandRayInteractor;
+    public UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor rightHandRayInteractor;
+    public UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor leftHandRayInteractor;
     public Button PlayButton;
     public Button OptionsButton;
     public Button QuitButton;

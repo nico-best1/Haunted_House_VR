@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class MaterialPuzzleManager : MonoBehaviour
 {
@@ -49,7 +49,7 @@ public class MaterialPuzzleManager : MonoBehaviour
         if (doorToUnlock != null)
         {
             doorToUnlock.GetComponent<Rigidbody>().isKinematic = false;
-            doorToUnlock.GetComponent<XRGrabInteractable>().enabled = true;
+            doorToUnlock.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().enabled = true;
         }
     }
 }
