@@ -6,7 +6,6 @@ public class CloseDoorTrigger : MonoBehaviour
     [Header("Door Settings")]
     public GameObject door;
     public GameObject pendulum;
-    public AudioSource slamAudio;
     public float r; 
 
     private bool hasTriggered = false;
@@ -41,9 +40,6 @@ public class CloseDoorTrigger : MonoBehaviour
                 grab.enabled = false;
         }
 
-        if (slamAudio != null)
-        {
-            slamAudio.Play();
-        }
+        AudioManager.Instance.PlayOneShotPosition(FMODEvents.Instance.doorClosedSound, this.transform.position);
     }
 }

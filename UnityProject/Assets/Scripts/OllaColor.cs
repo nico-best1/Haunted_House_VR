@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class OllaMaterial : MonoBehaviour
 {
-    public Renderer ollaRenderer;           
-    public AudioSource fillSound;          
+    public Renderer ollaRenderer;                     
 
     private void OnTriggerEnter(Collider other)
     {
@@ -12,9 +11,8 @@ public class OllaMaterial : MonoBehaviour
         {
             Material mat = ollaRenderer.sharedMaterial; 
             cup.SetMaterial(mat);
-
-            if (fillSound != null)
-                fillSound.Play();
+            
+            AudioManager.Instance.PlayOneShotPosition(FMODEvents.Instance.fillCupSound, transform.position);
         }
     }
 }

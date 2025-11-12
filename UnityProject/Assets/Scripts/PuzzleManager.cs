@@ -1,17 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
-using FMODUnity;
 
 public class PuzzleManager : MonoBehaviour
 {
     public XRSocketInteractor[] sockets;        // Los 3 sockets
     public string[] correctOrder;               // Nombres correctos de objetos
     public GameObject door;
-
-    // FMOD Event References
-    [SerializeField] private EventReference successSound;
-    [SerializeField] private EventReference failSound;
 
     private bool puzzleSolved = false;
 
@@ -48,7 +43,7 @@ public class PuzzleManager : MonoBehaviour
 
         if (correct)
         {
-            AudioManager.Instance.PlayOneShot(successSound, this.transform.position);
+            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.successSound);
             var rbDoor = door.GetComponent<Rigidbody>();
             if (rbDoor != null) rbDoor.isKinematic = false;
 
@@ -60,7 +55,7 @@ public class PuzzleManager : MonoBehaviour
         }
         else
         {
-            AudioManager.Instance.PlayOneShot(failSound, this.transform.position);
+            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.failSound);
         }
     }
 

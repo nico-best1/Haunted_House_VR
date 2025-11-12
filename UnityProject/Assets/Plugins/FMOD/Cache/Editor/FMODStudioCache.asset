@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9054852274663693291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DoorClosed
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/DoorClosed
+  Guid:
+    Data1: 1962399221
+    Data2: 1094072596
+    Data3: -2097912960
+    Data4: -2131038983
+  Banks:
+  - {fileID: 4034627420911964788}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3418781902898865804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18,6 +45,60 @@ MonoBehaviour:
     Data2: 1120555089
     Data3: -1394958202
     Data4: -991623140
+  Banks:
+  - {fileID: 4034627420911964788}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1261221589417504281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FillCup
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/FillCup
+  Guid:
+    Data1: 963906667
+    Data2: 1089526682
+    Data3: 717579413
+    Data4: -1793180205
+  Banks:
+  - {fileID: 4034627420911964788}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-817579251403630000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PuzzleCube
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/PuzzleCube
+  Guid:
+    Data1: -415522411
+    Data2: 1229340425
+    Data3: 1452975784
+    Data4: 1390024012
   Banks:
   - {fileID: 4034627420911964788}
   IsStream: 0
@@ -73,18 +154,27 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -3418781902898865804}
   - {fileID: -343484393495673776}
+  - {fileID: -1261221589417504281}
+  - {fileID: -817579251403630000}
+  - {fileID: -9054852274663693291}
   EditorParameters: []
   MasterBanks:
   - {fileID: 170864418733350093}
   StringsBanks:
   - {fileID: 4154371129096532389}
   cacheVersion: 131856
-  cacheTime: 638985404623964397
+  cacheTime: 638985467483119978
   SerializableEventsDict:
   - key: event:/FaiPuzzle
     index: 0
   - key: event:/SuccessPuzzle
     index: 1
+  - key: event:/FillCup
+    index: 2
+  - key: event:/PuzzleCube
+    index: 3
+  - key: event:/DoorClosed
+    index: 4
 --- !u!114 &170864418733350093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,7 +190,7 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638985404623345445
+  lastModified: 638985467482676079
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -120,10 +210,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638985404623964397
+  lastModified: 638985467483119978
   FileSizes:
   - Name: Desktop
-    Value: 22176
+    Value: 57536
   Exists: 1
 --- !u!114 &4154371129096532389
 MonoBehaviour:
@@ -140,8 +230,8 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638985404623355423
+  lastModified: 638985467482686056
   FileSizes:
   - Name: Desktop
-    Value: 872
+    Value: 1004
   Exists: 1

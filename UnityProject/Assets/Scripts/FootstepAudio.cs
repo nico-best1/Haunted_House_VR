@@ -29,8 +29,7 @@ public class FootstepAudio : MonoBehaviour
         if (characterController == null || moveProvider == null)
             return;
 
-        // Use the correct property for input actions
-        InputActionProperty inputMoveAction = moveProvider.leftHandMoveAction; // or rightHandMoveAction based on your setup
+        InputActionProperty inputMoveAction = moveProvider.leftHandMoveAction; 
         Vector2 input = inputMoveAction.action.ReadValue<Vector2>();
         bool isMoving = input.magnitude > minMoveSpeed;
 
