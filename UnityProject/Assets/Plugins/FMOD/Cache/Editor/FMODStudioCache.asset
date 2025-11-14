@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4955879675997954006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PlayerFootsteps
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/PlayerFootsteps
+  Guid:
+    Data1: 961360790
+    Data2: 1091708290
+    Data3: -385290612
+    Data4: 691855046
+  Banks:
+  - {fileID: 4034627420911964788}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 740
 --- !u!114 &-3418781902898865804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,13 +184,14 @@ MonoBehaviour:
   - {fileID: -1261221589417504281}
   - {fileID: -817579251403630000}
   - {fileID: -9054852274663693291}
+  - {fileID: -4955879675997954006}
   EditorParameters: []
   MasterBanks:
   - {fileID: 170864418733350093}
   StringsBanks:
   - {fileID: 4154371129096532389}
   cacheVersion: 131856
-  cacheTime: 638985467483119978
+  cacheTime: 638987205028728844
   SerializableEventsDict:
   - key: event:/FaiPuzzle
     index: 0
@@ -175,6 +203,8 @@ MonoBehaviour:
     index: 3
   - key: event:/DoorClosed
     index: 4
+  - key: event:/PlayerFootsteps
+    index: 5
 --- !u!114 &170864418733350093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +220,7 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638985467482676079
+  lastModified: 638987205025890882
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -210,10 +240,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638985467483119978
+  lastModified: 638987205028728844
   FileSizes:
   - Name: Desktop
-    Value: 57536
+    Value: 134272
   Exists: 1
 --- !u!114 &4154371129096532389
 MonoBehaviour:
@@ -230,8 +260,8 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638985467482686056
+  lastModified: 638987205025910813
   FileSizes:
   - Name: Desktop
-    Value: 1004
+    Value: 1060
   Exists: 1

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{7ae0c6db-fcfb-4c35-9d98-9caa204bc8c3}">
+	<object class="AudioFile" id="{4a25a704-420d-4b62-a3cb-6722d77d6d5f}">
 		<property name="assetPath">
-			<value>AudioJuego/SFX/Steps.mp3</value>
+			<value>AudioJuego/SFX/Steps/Steps 3.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>5.4073469387755102</value>
+			<value>0.70530612244897961</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{7c9c9fe5-ab57-441f-805f-39351efdc682}</destination>

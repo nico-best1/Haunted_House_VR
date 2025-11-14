@@ -18,6 +18,9 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Door Closed")]
     [field: SerializeField] public EventReference doorClosedSound { get; private set; }
 
+    [field: Header("Player Footsteps")]
+    [field: SerializeField] public EventReference playerFootsteps { get; private set; }
+
     public static FMODEvents Instance { get; private set; }
 
     private void Awake()
