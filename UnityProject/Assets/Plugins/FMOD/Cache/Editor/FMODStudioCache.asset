@@ -131,7 +131,8 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 2267189465365636176}
   MinDistance: 1
   MaxDistance: 20
   Length: 127346
@@ -216,13 +217,14 @@ MonoBehaviour:
   - {fileID: 3957169614003907941}
   - {fileID: -5795532495932271224}
   - {fileID: -8372658139716150226}
+  - {fileID: 5622691840068523334}
   EditorParameters: []
   MasterBanks:
   - {fileID: 170864418733350093}
   StringsBanks:
   - {fileID: 4154371129096532389}
   cacheVersion: 131856
-  cacheTime: 638990559708356402
+  cacheTime: 638990858021744063
   SerializableEventsDict:
   - key: event:/Ambience/Wind
     index: 0
@@ -242,6 +244,8 @@ MonoBehaviour:
     index: 7
   - key: event:/SFX/Effects/DoorClosed
     index: 8
+  - key: event:/Ambience/Tension
+    index: 9
 --- !u!114 &144359595651652963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,10 +288,34 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638990559706128030
+  lastModified: 638990858021729198
   FileSizes:
   - Name: Desktop
     Value: 1074
+  Exists: 1
+--- !u!114 &2267189465365636176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind/Intensity
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Intensity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 794563628
+    data2: 3353328698
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &3957169614003907941
 MonoBehaviour:
@@ -351,10 +379,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638990559706138102
+  lastModified: 638990858021744063
   FileSizes:
   - Name: Desktop
-    Value: 1304
+    Value: 1406
   Exists: 1
 --- !u!114 &4768730346202842956
 MonoBehaviour:
@@ -371,8 +399,35 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638990547680316741
+  lastModified: 638990858021633317
   FileSizes:
   - Name: Desktop
-    Value: 1538336
+    Value: 1539488
   Exists: 1
+--- !u!114 &5622691840068523334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Tension
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambience/Tension
+  Guid:
+    Data1: -1038094418
+    Data2: 1094228188
+    Data3: 2056440459
+    Data4: -274780000
+  Banks:
+  - {fileID: 4768730346202842956}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

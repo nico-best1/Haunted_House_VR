@@ -10,8 +10,7 @@ public class Event2 : MonoBehaviour
     public float minFlickerInterval = 0.05f;
     public float maxFlickerInterval = 0.2f;
 
-    public AudioSource curtainAudio;
-    public AudioSource backgroundAudioSource;
+
     public float fadeInDuration = 3f;
 
     public Event1 previousEvent;
@@ -20,14 +19,13 @@ public class Event2 : MonoBehaviour
     private bool hasTriggered = false;
     private List<Vector3> originalLightPositions = new List<Vector3>();
 
+    private FMOD.Studio.EventInstance tensionSound;
 
     void Start()
     {
-        if (backgroundAudioSource != null)
-        {
-            backgroundAudioSource.volume = 0f;
-            backgroundAudioSource.Play();
-        }
+        tensionSound = FMODUnity.RuntimeManager.CreateInstance(FMODEvents.Instance.tension);
+        tensionSound.start();
+        AudioManager.Instance.PlayOneShotPosition(FMODEvents.Instance.wind, transform.position);   
     }
 
     private void OnTriggerEnter(Collider other)
@@ -48,10 +46,7 @@ public class Event2 : MonoBehaviour
 
         AudioManager.Instance.PlayOneShot(FMODEvents.Instance.strongStringJumpscare);
 
-        if (backgroundAudioSource != null)
-        {
-            StartCoroutine(FadeInBackgroundMusic());
-        }
+        StartCoroutine(FadeInBackgroundMusic());
 
         StartCoroutine(FlickerLights());
 
@@ -64,13 +59,18 @@ public class Event2 : MonoBehaviour
     private IEnumerator FadeInBackgroundMusic()
     {
         float timer = 0f;
+
         while (timer < fadeInDuration)
         {
             timer += Time.deltaTime;
-            backgroundAudioSource.volume = Mathf.Lerp(0f, 1f, timer / fadeInDuration);
+
+            float value = Mathf.Lerp(0f, 1f, timer / fadeInDuration);
+            tensionSound.setParameterByName("Intensity", value);
+
             yield return null;
         }
-        backgroundAudioSource.volume = 1f;
+
+        tensionSound.setParameterByName("Intensity", 1f);
     }
 
     private IEnumerator FlickerLights()
