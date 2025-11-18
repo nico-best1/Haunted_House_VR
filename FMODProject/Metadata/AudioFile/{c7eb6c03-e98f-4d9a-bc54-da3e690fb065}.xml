@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{c7eb6c03-e98f-4d9a-bc54-da3e690fb065}">
 		<property name="assetPath">
-			<value>AudioJuego/SFX/Parpadeoluz2.wav</value>
+			<value>AudioJuego/SFX/Lights/Parpadeoluz2.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

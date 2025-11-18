@@ -9,7 +9,6 @@ public class Event1 : MonoBehaviour
     public Transform playerHead; // Esto es la c�mara del VR rig (HMD)
     public Transform wallDirectionReference; // Un punto enfrente de la pared, hacia donde deber�a mirar para verla
     public float maxViewAngle = 60f; // Cu�nto puede desviarse la mirada para que NO la est� viendo
-    public AudioClip doorClosed; // Sonido que se reproduce al desaparecer la pared
     public GameObject gramophone;
 
     private bool eventTriggered = false;
@@ -38,7 +37,7 @@ public class Event1 : MonoBehaviour
                 door.gameObject.transform.rotation = Quaternion.Euler(-90, 90, 180); // Resetea la rotaci�n de la puerta
                 door.GetComponent<Rigidbody>().isKinematic = true;
                 door.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().enabled = false; // Desactiva la puerta para que no se pueda abrir
-                SoundManager.Instance.PlaySFX(doorClosed);
+                AudioManager.Instance.PlayOneShotPosition(FMODEvents.Instance.doorClosedSound, door.transform.position); // Reproduce el sonido de la puerta cerrada
                 gramophone.GetComponent<AudioSource>().Stop(); // Desactiva el gram�fono 
                 wallToDisappear.SetActive(false);
                 break;

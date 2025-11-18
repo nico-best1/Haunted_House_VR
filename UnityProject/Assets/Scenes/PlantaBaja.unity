@@ -8271,116 +8271,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7131379976848087360, guid: 29675891e03ee03488970d98477d3ea7, type: 3}
   m_PrefabInstance: {fileID: 439688795}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &440168221
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 440168222}
-  - component: {fileID: 440168225}
-  - component: {fileID: 440168227}
-  - component: {fileID: 440168226}
-  m_Layer: 0
-  m_Name: SoundManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &440168222
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440168221}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2155542, y: -0.3539176, z: -4.065824}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 616837439}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &440168225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440168221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4757026a0a1c354783f8f1ce0182b6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSource: {fileID: 0}
-  sfxSource: {fileID: 0}
---- !u!114 &440168226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440168221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  Event: 
-  EventPlayTrigger: 0
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
---- !u!114 &440168227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440168221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  Event: 
-  EventPlayTrigger: 0
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
 --- !u!4 &444985764 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4653786702808938, guid: fb71d571078e952469f83dcc9bb68890, type: 3}
@@ -10993,7 +10883,6 @@ Transform:
   m_Children:
   - {fileID: 1356995193}
   - {fileID: 1502850118}
-  - {fileID: 1948646501}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &570119355
@@ -12399,7 +12288,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 440168222}
   - {fileID: 758927688}
   - {fileID: 342552294}
   - {fileID: 2079287898}
@@ -12697,48 +12585,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f6ace45e226e84b8453d73df64c7be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
+  <flickerLights>k__BackingField:
+    Guid:
+      Data1: 1279048545
+      Data2: 1321976502
+      Data3: -103703663
+      Data4: -843111497
+    Path: event:/SFX/Effects/FlickerLights
+  <strongStringJumpscare>k__BackingField:
+    Guid:
+      Data1: 1233690709
+      Data2: 1120044687
+      Data3: 1447636909
+      Data4: 1826573816
+    Path: event:/SFX/Jumpscares/StrongString
   <successSound>k__BackingField:
     Guid:
       Data1: 1904206181
       Data2: 1248064629
       Data3: 1301222033
       Data4: -1035451544
-    Path: event:/SuccessPuzzle
+    Path: event:/SFX/Puzzles/SuccessPuzzle
   <failSound>k__BackingField:
     Guid:
       Data1: 1271379483
       Data2: 1120555089
       Data3: -1394958202
       Data4: -991623140
-    Path: event:/FaiPuzzle
+    Path: event:/SFX/Puzzles/FaiPuzzle
   <fillCupSound>k__BackingField:
     Guid:
       Data1: 963906667
       Data2: 1089526682
       Data3: 717579413
       Data4: -1793180205
-    Path: event:/FillCup
+    Path: event:/SFX/Effects/FillCup
   <puzzleCubeSound>k__BackingField:
     Guid:
       Data1: -415522411
       Data2: 1229340425
       Data3: 1452975784
       Data4: 1390024012
-    Path: event:/PuzzleCube
+    Path: event:/SFX/Puzzles/PuzzleCube
   <doorClosedSound>k__BackingField:
     Guid:
       Data1: 1962399221
       Data2: 1094072596
       Data3: -2097912960
       Data4: -2131038983
-    Path: event:/DoorClosed
+    Path: event:/SFX/Effects/DoorClosed
   <playerFootsteps>k__BackingField:
     Guid:
       Data1: 961360790
       Data2: 1091708290
       Data3: -385290612
       Data4: 691855046
-    Path: event:/PlayerFootsteps
+    Path: event:/SFX/Player/PlayerFootsteps
 --- !u!1 &646644826
 GameObject:
   m_ObjectHideFlags: 0
@@ -31431,8 +31333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f7c052c90835e4e95e90e720dc285b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolSize: 10
-  audioSourcePrefab: {fileID: 0}
 --- !u!4 &1164541075
 Transform:
   m_ObjectHideFlags: 0
@@ -36083,7 +35983,6 @@ MonoBehaviour:
   playerHead: {fileID: 941035299}
   wallDirectionReference: {fileID: 895554581}
   maxViewAngle: 60
-  doorClosed: {fileID: 8300000, guid: 811a690928114d0489e11a6014c14a23, type: 3}
   gramophone: {fileID: 103633761}
 --- !u!65 &1363467178
 BoxCollider:
@@ -36531,17 +36430,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8793ce4e68c3549a4bb5abc0da0cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StrongString: {fileID: 8300000, guid: ebfd2b9526a3325458c6e1bf6acb6f61, type: 3}
   flickerLights:
   - {fileID: 1736778638}
   - {fileID: 478854915}
   - {fileID: 1424896335}
   - {fileID: 1137280403}
   flickerDuration: 3
-  flickerSounds:
-  - {fileID: 8300000, guid: 40ac37e7ba8a1014c8c1462345f16060, type: 3}
-  - {fileID: 8300000, guid: 8eae86905df428f4aafab3cc664fc144, type: 3}
-  - {fileID: 8300000, guid: e6b4cea06d18e9c47b9121e5b444635f, type: 3}
   flickerVolume: 1
   minFlickerInterval: 0.05
   maxFlickerInterval: 0.2
@@ -57620,69 +57514,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3161402419910293777, guid: 31f56fbdf39233f438cb789d5fd59cfe, type: 3}
   m_PrefabInstance: {fileID: 1946190883}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1948646500
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1948646501}
-  - component: {fileID: 1948646502}
-  m_Layer: 0
-  m_Name: Audio
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1948646501
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948646500}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.929, y: -0.702, z: 1.98}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 568984070}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1948646502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948646500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  Event: 
-  EventPlayTrigger: 0
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
 --- !u!1001 &1948799361
 PrefabInstance:
   m_ObjectHideFlags: 0

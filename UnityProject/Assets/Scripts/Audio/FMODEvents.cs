@@ -3,6 +3,12 @@ using FMODUnity;
 
 public class FMODEvents : MonoBehaviour
 {
+    [field: Header("Flicker Lights")]
+    [field: SerializeField] public EventReference flickerLights { get; private set; }
+
+    [field: Header("Strong String Jumpscare")]
+    [field: SerializeField] public EventReference strongStringJumpscare { get; private set; }
+
     [field: Header("Puzzle Success")]
     [field: SerializeField] public EventReference successSound { get; private set; }
 

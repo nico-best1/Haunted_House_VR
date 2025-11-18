@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class Event2 : MonoBehaviour
 {
-    public AudioClip StrongString;
     public List<Light> flickerLights;
     public float flickerDuration = 3f;
-    public List<AudioClip> flickerSounds;
     public float flickerVolume = 1f;
     public float minFlickerInterval = 0.05f;
     public float maxFlickerInterval = 0.2f;
@@ -48,8 +46,7 @@ public class Event2 : MonoBehaviour
         if (curtainAudio != null && curtainAudio.isPlaying)
             curtainAudio.Stop();
 
-        if (StrongString != null)
-            SoundManager.Instance.PlaySFX(StrongString);
+        AudioManager.Instance.PlayOneShot(FMODEvents.Instance.strongStringJumpscare);
 
         if (backgroundAudioSource != null)
         {
@@ -100,12 +97,8 @@ public class Event2 : MonoBehaviour
                 light.transform.position += Vector3.right * 100f;
 
                 // Sonido
-                if (flickerSounds != null && flickerSounds.Count > 0 && soundCooldown <= 0f)
-                {
-                    AudioClip randomClip = flickerSounds[Random.Range(0, flickerSounds.Count)];
-                    AudioPool.Instance.PlaySound(randomClip, light.transform.position, flickerVolume);
-                    soundCooldown = 0.2f;
-                }
+                AudioManager.Instance.PlayOneShotPosition(FMODEvents.Instance.flickerLights, originalLightPositions[index]);
+                soundCooldown = 0.2f;
 
                 // Espera un tiempo aleatorio
                 float waitTime = Random.Range(minFlickerInterval, maxFlickerInterval);
