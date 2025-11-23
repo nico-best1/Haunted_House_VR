@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class CreditsSequence : MonoBehaviour
 {
     [Header("Créditos (en orden)")]
@@ -11,8 +12,13 @@ public class CreditsSequence : MonoBehaviour
     public float delayBetweenTexts = 1f;
     public float delayBeforeCredits = 4f; // Tiempo en negro tras jumpscare
 
+    private FinalMonsterTrigger finalTrigger;
+    private FMOD.Studio.EventInstance musicInstance;
+
     private void Start()
     {
+        finalTrigger = FindFirstObjectByType<FinalMonsterTrigger>();
+        musicInstance = finalTrigger.GetCreditsMusicInstance();
         StartCoroutine(PlayCredits());
     }
 
@@ -36,10 +42,33 @@ public class CreditsSequence : MonoBehaviour
             obj.SetActive(false);
             yield return new WaitForSeconds(delayBetweenTexts);
         }
-
+        yield return StartCoroutine(FadeOutMusic());
         // Reinicia la escena al final
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    private IEnumerator FadeOutMusic()
+    {
+        float duration = 2f; // duración del fade
+        float elapsed = 0f;
+        float startValue = 1f; // valor inicial de intensity
+
+        while (elapsed < duration)
+        {
+            float t = elapsed / duration;
+            float intensity = Mathf.Lerp(startValue, 0f, t);
+
+            musicInstance.setParameterByName("Intensity", intensity);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        // Asegurar que queda en 0
+        musicInstance.setParameterByName("Intensity", 0f);
+        musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
 
     IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end)
     {

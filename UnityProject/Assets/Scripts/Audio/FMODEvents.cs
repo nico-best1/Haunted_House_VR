@@ -3,6 +3,15 @@ using FMODUnity;
 
 public class FMODEvents : MonoBehaviour
 {
+    [field: Header("Credits Music")]
+    [field: SerializeField] public EventReference creditsMusic { get; private set; }
+
+    [field: Header("Final Jumpscare")]
+    [field: SerializeField] public EventReference finalJumpscare { get; private set; }
+
+    [field: Header("Objects Impact")]
+    [field: SerializeField] public EventReference objectsImpact { get; private set; }
+
     [field: Header("Flashlight")]
     [field: SerializeField] public EventReference flashlight { get; private set; }
 

@@ -1703,6 +1703,8 @@ GameObject:
   - component: {fileID: 84687276}
   - component: {fileID: 84687275}
   - component: {fileID: 84687280}
+  - component: {fileID: 84687282}
+  - component: {fileID: 84687281}
   m_Layer: 9
   m_Name: Red
   m_TagString: Untagged
@@ -1972,6 +1974,32 @@ MonoBehaviour:
   effectDuration: 2
   flickerSpeed: 20
   maxEmission: 2
+--- !u!114 &84687281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84687273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737dc5229c2b6034ab27e6e788da7f6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ImpactSound
+  minVelocity: 0.2
+--- !u!114 &84687282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84687273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6655c75366696c459bf4b84f246c819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialImpactData
+  material: 2
 --- !u!1001 &85255434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5992,6 +6020,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 4ce788de3c0103d4dba5764f0383a8cf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 319803777}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 4ce788de3c0103d4dba5764f0383a8cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 319803782}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 4ce788de3c0103d4dba5764f0383a8cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 319803781}
   m_SourcePrefab: {fileID: 100100000, guid: 4ce788de3c0103d4dba5764f0383a8cf, type: 3}
 --- !u!4 &319803775 stripped
 Transform:
@@ -6194,6 +6228,32 @@ MonoBehaviour:
   effectDuration: 2
   flickerSpeed: 10
   maxEmission: 1.5
+--- !u!114 &319803781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319803776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6655c75366696c459bf4b84f246c819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialImpactData
+  material: 0
+--- !u!114 &319803782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319803776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737dc5229c2b6034ab27e6e788da7f6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ImpactSound
+  minVelocity: 0.2
 --- !u!1001 &321283131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7760,9 +7820,6 @@ MonoBehaviour:
   monsterStartPos: {fileID: 794595800}
   playerHead: {fileID: 941035299}
   blackoutScreen: {fileID: 418937472}
-  audioSource: {fileID: 0}
-  jumpscareSound: {fileID: 8300000, guid: 1029608dbfe349147b6b1ead5a5fd185, type: 3}
-  creditsMusic: {fileID: 8300000, guid: 07eb16131884c1446a86c87d70a9a3d4, type: 3}
   tenseAudio: {fileID: 1022405371}
   creditsManager: {fileID: 0}
   monsterDirectionReference: {fileID: 794595800}
@@ -8933,13 +8990,50 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1974084187310096, guid: ab83b2ea2bebf53498f961ca7c866908, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 474370968}
+    - targetCorrespondingSourceObject: {fileID: 1974084187310096, guid: ab83b2ea2bebf53498f961ca7c866908, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 474370967}
   m_SourcePrefab: {fileID: 100100000, guid: ab83b2ea2bebf53498f961ca7c866908, type: 3}
 --- !u!4 &474370965 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4204794457178652, guid: ab83b2ea2bebf53498f961ca7c866908, type: 3}
   m_PrefabInstance: {fileID: 474370964}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &474370966 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1974084187310096, guid: ab83b2ea2bebf53498f961ca7c866908, type: 3}
+  m_PrefabInstance: {fileID: 474370964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &474370967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474370966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6655c75366696c459bf4b84f246c819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialImpactData
+  material: 1
+--- !u!114 &474370968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474370966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737dc5229c2b6034ab27e6e788da7f6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ImpactSound
+  minVelocity: 0.2
 --- !u!1 &476105862
 GameObject:
   m_ObjectHideFlags: 0
@@ -12679,13 +12773,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f6ace45e226e84b8453d73df64c7be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
+  <creditsMusic>k__BackingField:
+    Guid:
+      Data1: -587648166
+      Data2: 1135908581
+      Data3: -2052359020
+      Data4: -410288941
+    Path: event:/Music/CreditsMusic
+  <finalJumpscare>k__BackingField:
+    Guid:
+      Data1: -1980984181
+      Data2: 1209330279
+      Data3: 1308978876
+      Data4: 1460017667
+    Path: event:/SFX/Jumpscares/FinalJumpsacare
+  <objectsImpact>k__BackingField:
+    Guid:
+      Data1: -811213740
+      Data2: 1326876508
+      Data3: 86132910
+      Data4: -1820451148
+    Path: event:/SFX/Effects/ObjectsImpact
   <flashlight>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 896676276
+      Data2: 1122700232
+      Data3: 1966189712
+      Data4: -37774387
+    Path: event:/SFX/Player/Flashlight
   <gramophoneMusic>k__BackingField:
     Guid:
       Data1: -864702240
@@ -26701,6 +26816,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1081331266329926, guid: 6cd2d3bfdb770e444a10960e1191fc44, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1977484882}
+    - targetCorrespondingSourceObject: {fileID: 1081331266329926, guid: 6cd2d3bfdb770e444a10960e1191fc44, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1977484885}
+    - targetCorrespondingSourceObject: {fileID: 1081331266329926, guid: 6cd2d3bfdb770e444a10960e1191fc44, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1977484884}
   m_SourcePrefab: {fileID: 100100000, guid: 6cd2d3bfdb770e444a10960e1191fc44, type: 3}
 --- !u!1001 &928834957
 PrefabInstance:
@@ -33899,6 +34020,8 @@ GameObject:
   - component: {fileID: 1298708595}
   - component: {fileID: 1298708594}
   - component: {fileID: 1298708599}
+  - component: {fileID: 1298708601}
+  - component: {fileID: 1298708600}
   m_Layer: 9
   m_Name: Blue
   m_TagString: Untagged
@@ -34168,6 +34291,32 @@ MonoBehaviour:
   effectDuration: 2
   flickerSpeed: 20
   maxEmission: 2
+--- !u!114 &1298708600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298708592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6655c75366696c459bf4b84f246c819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialImpactData
+  material: 2
+--- !u!114 &1298708601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298708592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737dc5229c2b6034ab27e6e788da7f6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ImpactSound
+  minVelocity: 0.2
 --- !u!1001 &1301557112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34260,6 +34409,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1780976947277816, guid: f1e3cb70ed6b1064d95a421365fe70ea, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1301557115}
+    - targetCorrespondingSourceObject: {fileID: 1780976947277816, guid: f1e3cb70ed6b1064d95a421365fe70ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1301557119}
+    - targetCorrespondingSourceObject: {fileID: 1780976947277816, guid: f1e3cb70ed6b1064d95a421365fe70ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1301557118}
   m_SourcePrefab: {fileID: 100100000, guid: f1e3cb70ed6b1064d95a421365fe70ea, type: 3}
 --- !u!4 &1301557113 stripped
 Transform:
@@ -34441,6 +34596,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1301557118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301557114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6655c75366696c459bf4b84f246c819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialImpactData
+  material: 0
+--- !u!114 &1301557119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301557114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737dc5229c2b6034ab27e6e788da7f6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ImpactSound
+  minVelocity: 0.2
 --- !u!1001 &1304476618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35015,7 +35196,7 @@ PrefabInstance:
       objectReference: {fileID: 758927687}
     - target: {fileID: 1614158985855500528, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1614158985855500528, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -35099,7 +35280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9121915025561407470, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9121915025561407470, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -40935,6 +41116,8 @@ GameObject:
   - component: {fileID: 1577860133}
   - component: {fileID: 1577860132}
   - component: {fileID: 1577860137}
+  - component: {fileID: 1577860139}
+  - component: {fileID: 1577860138}
   m_Layer: 9
   m_Name: Green
   m_TagString: Untagged
@@ -41204,6 +41387,32 @@ MonoBehaviour:
   effectDuration: 2
   flickerSpeed: 20
   maxEmission: 2
+--- !u!114 &1577860138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577860130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737dc5229c2b6034ab27e6e788da7f6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ImpactSound
+  minVelocity: 0.2
+--- !u!114 &1577860139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577860130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6655c75366696c459bf4b84f246c819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialImpactData
+  material: 2
 --- !u!1001 &1580474236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58002,6 +58211,32 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &1977484884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977484877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6655c75366696c459bf4b84f246c819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialImpactData
+  material: 0
+--- !u!114 &1977484885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977484877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737dc5229c2b6034ab27e6e788da7f6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ImpactSound
+  minVelocity: 0.2
 --- !u!1 &1977557793
 GameObject:
   m_ObjectHideFlags: 0

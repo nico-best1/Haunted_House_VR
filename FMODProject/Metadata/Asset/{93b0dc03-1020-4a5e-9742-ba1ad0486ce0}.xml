@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{93b0dc03-1020-4a5e-9742-ba1ad0486ce0}">
+		<property name="assetPath">
+			<value>AudioJuego/SFX/ObjectsImpact/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7c9c9fe5-ab57-441f-805f-39351efdc682}</destination>
+		</relationship>
+	</object>
+</objects>

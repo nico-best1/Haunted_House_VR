@@ -1,3 +1,4 @@
+using FMOD.Studio;
 using UnityEngine;
 
 public class FinalMonsterTrigger : MonoBehaviour
@@ -5,17 +6,15 @@ public class FinalMonsterTrigger : MonoBehaviour
     [Header("Referencias")]
     public GameObject monster;
     public Transform monsterStartPos;
-    public Transform playerHead; // Usa la cámara (Main Camera)
+    public Transform playerHead; 
     public GameObject blackoutScreen;
-    public AudioSource audioSource;
-    public AudioClip jumpscareSound;
-    public AudioClip creditsMusic;
+    private FMOD.Studio.EventInstance creditsMusicInstance;
     public TensionAudioController tenseAudio;
 
     public GameObject creditsManager;
 
     [Header("Parámetros")]
-    public Transform monsterDirectionReference; // Punto hacia donde el jugador debe mirar (normalmente el monstruo)
+    public Transform monsterDirectionReference; // Punto hacia donde el jugador debe mirar 
     public float viewAngleThreshold = 60f;
 
     private bool hasTriggered = false;
@@ -63,11 +62,7 @@ public class FinalMonsterTrigger : MonoBehaviour
         monster.transform.position = playerHead.position + playerHead.forward * 1.5f;
         monster.transform.LookAt(playerHead);
 
-        if (audioSource && jumpscareSound)
-        {
-            audioSource.clip = jumpscareSound;
-            audioSource.Play();
-        }
+        AudioManager.Instance.PlayOneShot(FMODEvents.Instance.finalJumpscare);
 
         Invoke(nameof(FadeToBlack), 0.4f);
         Invoke(nameof(PlayCreditsMusic), 2.5f);
@@ -81,16 +76,17 @@ public class FinalMonsterTrigger : MonoBehaviour
 
     private void PlayCreditsMusic()
     {
-        if (audioSource && creditsMusic)
-        {
-            audioSource.clip = creditsMusic;
-            audioSource.loop = true;
-            audioSource.Play();
-        }
+        creditsMusicInstance = AudioManager.Instance.CreateInstance(FMODEvents.Instance.creditsMusic);
+        creditsMusicInstance.start();
 
         if (creditsManager != null)
         {
             creditsManager.SetActive(true); // Activa el objeto para que el script Start() comience
         }
+    }
+
+    public EventInstance GetCreditsMusicInstance()
+    {
+        return creditsMusicInstance;
     }
 }
