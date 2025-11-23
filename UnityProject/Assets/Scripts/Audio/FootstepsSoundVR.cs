@@ -9,7 +9,6 @@ public class FootstepsSoundVR : MonoBehaviour
 
     [Header("Movement Detection")]
     [SerializeField] private CharacterController characterController;
-    [SerializeField] private float minMoveSpeed = 0.1f;
 
     private EventInstance footstepInstance;
     private bool isPlaying = false;
@@ -24,7 +23,7 @@ public class FootstepsSoundVR : MonoBehaviour
 
     private void Update()
     {
-        bool isMoving = characterController.velocity.magnitude > minMoveSpeed;
+        bool isMoving = characterController.velocity.magnitude > 0;
 
         if (isMoving && !isPlaying)
         {

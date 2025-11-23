@@ -3,6 +3,12 @@ using FMODUnity;
 
 public class FMODEvents : MonoBehaviour
 {
+    [field: Header("Flashlight")]
+    [field: SerializeField] public EventReference flashlight { get; private set; }
+
+    [field: Header("Gramophone Music")]
+    [field: SerializeField] public EventReference gramophoneMusic { get; private set; }
+
     [field: Header("Tension")]
     [field: SerializeField] public EventReference tension { get; private set; }
 

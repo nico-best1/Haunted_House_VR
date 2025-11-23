@@ -38,8 +38,8 @@ public class Event1 : MonoBehaviour
                 door.GetComponent<Rigidbody>().isKinematic = true;
                 door.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().enabled = false; // Desactiva la puerta para que no se pueda abrir
                 AudioManager.Instance.PlayOneShotPosition(FMODEvents.Instance.doorClosedSound, door.transform.position); // Reproduce el sonido de la puerta cerrada
-                gramophone.GetComponent<AudioSource>().Stop(); // Desactiva el gram�fono 
                 wallToDisappear.SetActive(false);
+                Destroy(gramophone);
                 break;
             }
 

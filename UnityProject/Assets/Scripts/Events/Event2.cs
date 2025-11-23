@@ -41,9 +41,6 @@ public class Event2 : MonoBehaviour
 
     private IEnumerator TriggerJumpscare()
     {
-        if (curtainAudio != null && curtainAudio.isPlaying)
-            curtainAudio.Stop();
-
         AudioManager.Instance.PlayOneShot(FMODEvents.Instance.strongStringJumpscare);
 
         StartCoroutine(FadeInBackgroundMusic());

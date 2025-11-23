@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 292637645207471467}
   - component: {fileID: 6283402223467919762}
   - component: {fileID: 2082684220529754969}
-  - component: {fileID: 2013979305738511637}
   - component: {fileID: -1510835770876413008}
   m_Layer: 0
   m_Name: Gramophone
@@ -116,21 +115,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1501113151858292660, guid: b4a31b1f2313af4428a521dfe14f8423, type: 3}
---- !u!114 &2013979305738511637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5697043653204528462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36179f47071e4b94f90c6d0d0c5866be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  startSoundClip: {fileID: 0}
-  musicClip: {fileID: 0}
 --- !u!114 &-1510835770876413008
 MonoBehaviour:
   m_ObjectHideFlags: 0

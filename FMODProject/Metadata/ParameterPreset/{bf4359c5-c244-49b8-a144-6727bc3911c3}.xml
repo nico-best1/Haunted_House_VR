@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="ParameterPreset" id="{9b85eba7-e208-46f2-90f9-ff70f42b60e8}">
+	<object class="ParameterPreset" id="{bf4359c5-c244-49b8-a144-6727bc3911c3}">
 		<property name="name">
-			<value>WindIntensity</value>
+			<value>ObstructionGramophone</value>
 		</property>
 		<relationship name="folder">
 			<destination>{95567c7f-45f2-40a2-8572-bd8e8b235d1b}</destination>
 		</relationship>
 		<relationship name="parameter">
-			<destination>{5f0c649b-1049-4c1d-b394-eb4f38ea3a0d}</destination>
+			<destination>{93d29d1a-8f4f-4fc8-8a57-60dfbcc3f844}</destination>
 		</relationship>
 	</object>
-	<object class="GameParameter" id="{5f0c649b-1049-4c1d-b394-eb4f38ea3a0d}">
+	<object class="GameParameter" id="{93d29d1a-8f4f-4fc8-8a57-60dfbcc3f844}">
 		<property name="initialValue">
 			<value>0</value>
 		</property>
