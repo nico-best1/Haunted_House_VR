@@ -28,12 +28,3 @@ Explore a mysterious abandoned mansion full of secrets, scares, and an eerie atm
 
 - **Movement:** Continuous using joystick  
 - **Interaction:** Press trigger or grip button  
-
----
-
-## Installation and Execution  
-
-### Steps
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/tuusuario/Haunted-House-VR.git
