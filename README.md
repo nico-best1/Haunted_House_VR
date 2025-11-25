@@ -1,7 +1,7 @@
 # Haunted House VR
 
 **Haunted House VR** is an immersive virtual reality horror experience developed with **Unity**.  
-Explore a mysterious abandoned mansion full of secrets, scares, and an eerie atmosphere, created to immerse the player in a short but intense story.
+Explore a mysterious abandoned mansion packed with secrets, scares, and an eerie atmosphere designed to fully immerse the player in a terrifying experience.
 
 ---
 
