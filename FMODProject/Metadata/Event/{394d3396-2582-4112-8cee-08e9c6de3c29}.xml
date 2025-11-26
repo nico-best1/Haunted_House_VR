@@ -5,7 +5,7 @@
 			<value>PlayerFootsteps</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{e7c62ba8-90a0-4fd2-8d3a-eb9414eee592}</destination>
@@ -200,7 +200,6 @@
 		<relationship name="effects">
 			<destination>{e486d5ab-0877-4f45-b7f5-3108808ffc51}</destination>
 			<destination>{e02c6204-bfef-4bdc-b6f2-0223c49e46a4}</destination>
-			<destination>{bdd4d2d1-0dbb-4a27-b2aa-b61528af740f}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{6de8face-a816-4bd5-92a8-4353eb8087a9}" />
@@ -290,7 +289,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{e02c6204-bfef-4bdc-b6f2-0223c49e46a4}" />
-	<object class="SpatialiserEffect" id="{bdd4d2d1-0dbb-4a27-b2aa-b61528af740f}" />
 	<object class="MixerBusFader" id="{d2bf18fc-5cb0-4c8c-af24-05cf3e206370}" />
 	<object class="Automator" id="{bd38c346-b092-4a07-a106-d269f1251965}">
 		<property name="nameOfPropertyBeingAutomated">

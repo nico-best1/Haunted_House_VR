@@ -149,6 +149,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8391990173679477098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/FlashlightOff
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Player/FlashlightOff
+  Guid:
+    Data1: 53328202
+    Data2: 1185235041
+    Data3: -1546859864
+    Data4: 479953051
+  Banks:
+  - {fileID: -7123653212959068591}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8228207221331802465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,10 +245,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638997255861433333
+  lastModified: 638997840629551327
   FileSizes:
   - Name: Desktop
-    Value: 354464
+    Value: 354304
   Exists: 1
 --- !u!114 &-7000536078853393068
 MonoBehaviour:
@@ -265,7 +292,7 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638997255812613708
+  lastModified: 638997840628887546
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -349,33 +376,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-6436512533495791750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Player/Flashlight
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFX/Player/Flashlight
-  Guid:
-    Data1: 896676276
-    Data2: 1122700232
-    Data3: 1966189712
-    Data4: -37774387
-  Banks:
-  - {fileID: -7123653212959068591}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-5895461701101450959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,6 +398,33 @@ MonoBehaviour:
   - {fileID: 4034627420911964788}
   IsStream: 0
   Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5867600645852792976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/FlashlightOn
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Player/FlashlightOn
+  Guid:
+    Data1: -889708732
+    Data2: 1283194366
+    Data3: -1738127966
+    Data4: -361272986
+  Banks:
+  - {fileID: -7123653212959068591}
+  IsStream: 0
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -557,10 +584,10 @@ MonoBehaviour:
   Banks:
   - {fileID: -7123653212959068591}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 2942905218101606149}
+  - {fileID: 5950738681510445087}
   MinDistance: 1
   MaxDistance: 20
   Length: 1010
@@ -616,6 +643,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -6791837063671628137}
+  - {fileID: 7879734128302209566}
   MinDistance: 1
   MaxDistance: 20
   Length: 552
@@ -703,15 +731,16 @@ MonoBehaviour:
   - {fileID: -8228207221331802465}
   - {fileID: 8267189984336592752}
   - {fileID: -1786905628216956352}
-  - {fileID: -6436512533495791750}
   - {fileID: -5299422456422655639}
+  - {fileID: -5867600645852792976}
+  - {fileID: -8391990173679477098}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6951638383043566694}
   StringsBanks:
   - {fileID: 3793154789422150260}
   cacheVersion: 131856
-  cacheTime: 638997255861433333
+  cacheTime: 638997840629551327
   SerializableEventsDict:
   - key: event:/Ambience/Tension
     index: 0
@@ -739,10 +768,12 @@ MonoBehaviour:
     index: 11
   - key: event:/SFX/Player/PlayerFootsteps
     index: 12
-  - key: event:/SFX/Player/Flashlight
-    index: 13
   - key: event:/SFX/Effects/DoorClosed
+    index: 13
+  - key: event:/SFX/Player/FlashlightOn
     index: 14
+  - key: event:/SFX/Player/FlashlightOff
+    index: 15
 --- !u!114 &170864418733350093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -778,7 +809,7 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638997255812578273
+  lastModified: 638997741044865044
   FileSizes:
   - Name: Desktop
     Value: 374784
@@ -862,30 +893,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 164022
---- !u!114 &2942905218101606149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/PlayerFootsteps/Velocidad
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: Velocidad
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 1329234386
-    data2: 3345667848
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &2975245575614393888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,7 +936,7 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638997255857959546
+  lastModified: 638997804384038936
   FileSizes:
   - Name: Desktop
     Value: 4157344
@@ -977,10 +984,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638997255812633738
+  lastModified: 638997840628897506
   FileSizes:
   - Name: Desktop
-    Value: 1964
+    Value: 2066
   Exists: 1
 --- !u!114 &3907778696474209899
 MonoBehaviour:
@@ -1069,6 +1076,30 @@ MonoBehaviour:
   ID:
     data1: 1426022106
     data2: 445090506
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5950738681510445087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerFootsteps/Velocidad
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Velocidad
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1329234386
+    data2: 3345667848
   Type: 0
   IsGlobal: 0
   Labels: []
@@ -1224,6 +1255,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 230001
+--- !u!114 &7879734128302209566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ObjectsImpact/objectVelocity
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: objectVelocity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 198778629
+    data2: 558677865
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &8267189984336592752
 MonoBehaviour:
   m_ObjectHideFlags: 0
