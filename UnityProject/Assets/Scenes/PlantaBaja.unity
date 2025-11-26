@@ -3302,7 +3302,6 @@ GameObject:
   - component: {fileID: 150705062}
   - component: {fileID: 150705061}
   - component: {fileID: 150705060}
-  - component: {fileID: 150705065}
   m_Layer: 11
   m_Name: XR Origin (XR Rig)
   m_TagString: Player
@@ -3398,26 +3397,6 @@ Transform:
   - {fileID: 976461092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -51.296, z: 0}
---- !u!114 &150705065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150705059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b04b76cb95ca784b8da958b3e745838, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FootstepsSoundVR
-  footstepEvent:
-    Guid:
-      Data1: 961360790
-      Data2: 1091708290
-      Data3: -385290612
-      Data4: 691855046
-    Path: event:/PlayerFootsteps
-  characterController: {fileID: 150705061}
 --- !u!1001 &152590037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32834,6 +32813,8 @@ GameObject:
   - component: {fileID: 1229942708}
   - component: {fileID: 1229942710}
   - component: {fileID: 1229942709}
+  - component: {fileID: 1229942712}
+  - component: {fileID: 1229942711}
   m_Layer: 11
   m_Name: Movement
   m_TagString: Untagged
@@ -32868,7 +32849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626a4d6723d6ad24b9aebb811ad5a3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Movement.ContinuousMoveProvider
-  m_Mediator: {fileID: 0}
+  m_Mediator: {fileID: 1229942711}
   m_TransformationPriority: 0
   m_MoveSpeed: 1.2
   m_InAirControlModifier: 0.5
@@ -32918,18 +32899,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DynamicMoveSpeed
   moveProvider: {fileID: 1229942709}
   joystick:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Joystick
       m_Type: 0
-      m_ExpectedControlType: 
+      m_ExpectedControlType: Vector2
       m_Id: 01e75767-9518-4b58-9f0a-1b30b1fb9f03
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   velocidadMaxima: 2.4
+--- !u!114 &1229942711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229942706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa7b4195685c3846be746c74f0ab2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.LocomotionMediator
+--- !u!114 &1229942712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229942706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a26c941eb8a46f7b6d00416227ab8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.XRBodyTransformer
+  m_XROrigin: {fileID: 150705063}
+  m_BodyPositionEvaluatorObject: {fileID: 0}
+  m_ConstrainedBodyManipulatorObject: {fileID: 0}
+  m_UseCharacterControllerIfExists: 1
 --- !u!1001 &1231602342
 PrefabInstance:
   m_ObjectHideFlags: 0
