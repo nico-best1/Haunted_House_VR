@@ -12752,6 +12752,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f6ace45e226e84b8453d73df64c7be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
+  <flashlightOn>k__BackingField:
+    Guid:
+      Data1: -889708732
+      Data2: 1283194366
+      Data3: -1738127966
+      Data4: -361272986
+    Path: event:/SFX/Player/FlashlightOn
+  <flashlightOff>k__BackingField:
+    Guid:
+      Data1: 53328202
+      Data2: 1185235041
+      Data3: -1546859864
+      Data4: 479953051
+    Path: event:/SFX/Player/FlashlightOff
   <creditsMusic>k__BackingField:
     Guid:
       Data1: -587648166
@@ -12773,13 +12787,6 @@ MonoBehaviour:
       Data3: 86132910
       Data4: -1820451148
     Path: event:/SFX/Effects/ObjectsImpact
-  <flashlight>k__BackingField:
-    Guid:
-      Data1: 896676276
-      Data2: 1122700232
-      Data3: 1966189712
-      Data4: -37774387
-    Path: event:/SFX/Player/Flashlight
   <gramophoneMusic>k__BackingField:
     Guid:
       Data1: -864702240
@@ -32376,11 +32383,11 @@ PrefabInstance:
       objectReference: {fileID: 1199074207}
     - target: {fileID: 6121193472208165914, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
       propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayFlashlightSound
+      value: PlayFlashlightOnSound
       objectReference: {fileID: 0}
     - target: {fileID: 6121193472208165914, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
       propertyPath: m_Deactivated.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayFlashlightSound
+      value: PlayFlashlightOffSound
       objectReference: {fileID: 0}
     - target: {fileID: 6121193472208165914, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
       propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName

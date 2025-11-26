@@ -15,11 +15,23 @@ public class FMODInteractableEvents : MonoBehaviour
         }
     }
 
-    public void PlayFlashlightSound()
+    public void PlayFlashlightOnSound()
     {
         if (AudioManager.Instance != null)
         {
-            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.flashlight);
+            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.flashlightOn);
+        }
+        else
+        {
+            Debug.LogWarning("AudioManager instance not found!");
+        }
+    }
+
+    public void PlayFlashlightOffSound()
+    {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.flashlightOff);
         }
         else
         {
