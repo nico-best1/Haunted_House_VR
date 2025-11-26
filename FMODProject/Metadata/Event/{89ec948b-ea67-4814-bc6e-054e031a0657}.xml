@@ -5,7 +5,7 @@
 			<value>FinalJumpsacare</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{39b2e1df-db37-4c16-bd69-f98a2a354f59}</destination>
@@ -96,6 +96,7 @@
 	<object class="MixerBusEffectChain" id="{bde43785-7ce8-4047-9a23-e5468b4cc5ed}">
 		<relationship name="effects">
 			<destination>{cc66920f-d164-462b-991d-cc39f6629583}</destination>
+			<destination>{1b1dee2a-550f-41f9-ae30-234eb10384fe}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{69d79b3f-5c23-4dae-b3de-c8e5d00e9fe0}" />
@@ -106,4 +107,5 @@
 	</object>
 	<object class="MixerBusFader" id="{ec68834b-bf1b-498b-9b19-5b01960d449f}" />
 	<object class="MixerBusFader" id="{cc66920f-d164-462b-991d-cc39f6629583}" />
+	<object class="SpatialiserEffect" id="{1b1dee2a-550f-41f9-ae30-234eb10384fe}" />
 </objects>

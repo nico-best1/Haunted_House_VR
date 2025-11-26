@@ -5,7 +5,7 @@
 			<value>CreditsMusic</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{cb013a49-1476-4e01-a398-531eb10229c5}</destination>
@@ -132,6 +132,7 @@
 	<object class="MixerBusEffectChain" id="{71f5e33d-3d2a-42bb-b28a-226b7c873ee5}">
 		<relationship name="effects">
 			<destination>{9140c8cf-9784-4461-b5b2-b5756e8712ab}</destination>
+			<destination>{c07c61b2-5545-4f86-9a39-3d968fcd26c1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{400db3e2-ce58-451a-8f91-2350bc69fa5d}" />
@@ -151,6 +152,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{bd147969-9dd4-414f-8f42-1e98ab98a390}" />
 	<object class="MixerBusFader" id="{9140c8cf-9784-4461-b5b2-b5756e8712ab}" />
+	<object class="SpatialiserEffect" id="{c07c61b2-5545-4f86-9a39-3d968fcd26c1}" />
 	<object class="AutomationCurve" id="{8bbfc08b-6bed-476a-b790-938b0d1a17b5}">
 		<relationship name="parameter">
 			<destination>{8d9156f5-9769-456f-993c-2a71b15c9be2}</destination>
