@@ -329,7 +329,11 @@
 	</object>
 	<object class="MixerBusPanner" id="{52e12555-490c-4388-bbb8-519ba17904dc}" />
 	<object class="MixerBusFader" id="{f55d6140-af13-4206-9d94-e8ce1addeb4f}" />
-	<object class="SpatialiserEffect" id="{0c867b5e-9dfc-468f-bc3f-36919fe2f3bb}" />
+	<object class="SpatialiserEffect" id="{0c867b5e-9dfc-468f-bc3f-36919fe2f3bb}">
+		<property name="distanceRolloffType">
+			<value>2</value>
+		</property>
+	</object>
 	<object class="AutomationCurve" id="{96e9bfcd-fa7b-4d69-b46d-40c0e90332f9}">
 		<relationship name="parameter">
 			<destination>{68b0c548-5865-4278-92a0-4b32be568198}</destination>
@@ -384,7 +388,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-80</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{6717a9a3-3105-49ce-971b-6060adadb46f}">
@@ -400,7 +404,7 @@
 			<value>2</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-80</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{1608ce5b-494b-42ed-b414-ae3aee3a1955}">
@@ -408,7 +412,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>0</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{83f1b754-537b-4d8e-94ad-514b3c48167e}">
@@ -424,7 +428,7 @@
 			<value>2</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>0</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{3bc8b4dc-e1af-430c-a956-ebd5a406ec5b}">
