@@ -1987,6 +1987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ImpactSound
   minVelocity: 0.2
+  maxVelocity: 10
 --- !u!114 &84687282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6233,6 +6234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ImpactSound
   minVelocity: 0.2
+  maxVelocity: 10
 --- !u!1001 &321283131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9013,6 +9015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ImpactSound
   minVelocity: 0.2
+  maxVelocity: 10
 --- !u!1 &476105862
 GameObject:
   m_ObjectHideFlags: 0
@@ -34364,6 +34367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ImpactSound
   minVelocity: 0.2
+  maxVelocity: 10
 --- !u!1001 &1301557112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34669,6 +34673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ImpactSound
   minVelocity: 0.2
+  maxVelocity: 10
 --- !u!1001 &1304476618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35272,6 +35277,30 @@ PrefabInstance:
     - target: {fileID: 6096271716228517679, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.93046194
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.93046194
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.93046194
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.14506
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.63679
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.042
       objectReference: {fileID: 0}
     - target: {fileID: 7115994224307813692, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_LocalScale.x
@@ -41447,6 +41476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ImpactSound
   minVelocity: 0.2
+  maxVelocity: 10
 --- !u!114 &1577860139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58284,6 +58314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ImpactSound
   minVelocity: 0.2
+  maxVelocity: 10
 --- !u!1 &1977557793
 GameObject:
   m_ObjectHideFlags: 0
