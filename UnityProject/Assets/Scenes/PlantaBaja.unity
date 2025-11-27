@@ -653,7 +653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1510835770876413008, guid: d0e0bb1870fb7a74c8677460d11663bf, type: 3}
       propertyPath: OverrideMaxDistance
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -1510835770876413008, guid: d0e0bb1870fb7a74c8677460d11663bf, type: 3}
       propertyPath: OverrideMinDistance
@@ -1507,10 +1507,10 @@ MonoBehaviour:
   drawerMoveSpeed: 2
   flickerLights:
   - {fileID: 2124493208}
-  flickerDuration: 17
+  flickerDuration: 10
   minFlickerInterval: 0.05
   maxFlickerInterval: 0.2
-  eventDuration: 20
+  eventDuration: 10
 --- !u!65 &76412335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5818,6 +5818,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2197193107507980275, guid: 013f1985a39c9f14789f9862a554ca58, type: 3}
   m_PrefabInstance: {fileID: 313241123}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &317082793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 317082794}
+  - component: {fileID: 317082796}
+  - component: {fileID: 317082795}
+  m_Layer: 0
+  m_Name: CauldronsSoundTrigguer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &317082794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317082793}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.489, y: -2.973, z: -3.555}
+  m_LocalScale: {x: 1, y: 4.9786654, z: 5.0834723}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 502319113}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &317082795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317082793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d527e91342db842924f102e6af4fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CauldronSoundController
+  parameterName: CauldronIntensity
+  fadeInDuration: 5
+  fadeOutDuration: 3
+  cauldronsObjects:
+  - {fileID: 127642022}
+  - {fileID: 139637429}
+  - {fileID: 342086306}
+  - {fileID: 1444836007}
+--- !u!65 &317082796
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317082793}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.009008408, y: 1, z: 1}
+  m_Center: {x: -0.4954958, y: 0, z: 0}
 --- !u!1001 &319414291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7788,7 +7862,7 @@ MonoBehaviour:
   monsterStartPos: {fileID: 794595800}
   playerHead: {fileID: 941035299}
   blackoutScreen: {fileID: 418937472}
-  tenseAudio: {fileID: 1022405371}
+  tensionAudioController: {fileID: 1022405371}
   creditsManager: {fileID: 0}
   monsterDirectionReference: {fileID: 794595800}
   viewAngleThreshold: 60
@@ -7961,6 +8035,7 @@ RectTransform:
   - {fileID: 1184896508}
   - {fileID: 1806294840}
   - {fileID: 1232273571}
+  - {fileID: 1453812224}
   m_Father: {fileID: 1078140079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8019,7 +8094,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 941035302}
-  m_PlaneDistance: 0.5
+  m_PlaneDistance: 3
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -9547,6 +9622,7 @@ Transform:
   - {fileID: 2051887612}
   - {fileID: 1582435533}
   - {fileID: 247101679}
+  - {fileID: 317082794}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &502565637
@@ -12742,6 +12818,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f6ace45e226e84b8453d73df64c7be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
+  <doorCreak>k__BackingField:
+    Guid:
+      Data1: -1271474575
+      Data2: 1304223440
+      Data3: -1208578383
+      Data4: -1153721882
+    Path: event:/SFX/Effects/DoorCreak
+  <cauldronBoiling>k__BackingField:
+    Guid:
+      Data1: -391495100
+      Data2: 1246107862
+      Data3: 1095557304
+      Data4: -1201330887
+    Path: event:/SFX/Effects/Cauldron Boiling
   <clockSound>k__BackingField:
     Guid:
       Data1: 212014089
@@ -28588,7 +28678,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -29093,13 +29183,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022405367}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.077, y: 3.4, z: -12.74}
+  m_LocalRotation: {x: -0, y: -0.73917407, z: -0, w: 0.6735145}
+  m_LocalPosition: {x: 22.496, y: 3.4, z: -13.253}
   m_LocalScale: {x: 0.0035498762, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1078140079}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -95.322, z: 0}
 --- !u!114 &1022405369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29145,12 +29235,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1022405367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59dce38d2e98f6846b05ef26bdff662e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7433e4d440055034599a0409cd2aa7ad, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  tensionAudio: {fileID: 0}
-  maxVolume: 1
-  fadeSpeed: 0.5
+  m_EditorClassIdentifier: Assembly-CSharp::TensionAudioController
+  parameterName: TensionIntensity
+  fadeInDuration: 6
+  fadeOutDuration: 1
 --- !u!4 &1024657373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8619810336792446185, guid: d2fdb08bf4ada3a468116aa81d86bba8, type: 3}
@@ -32095,7 +32185,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -33143,7 +33233,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -34905,6 +34995,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9121915025561407470, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
   m_PrefabInstance: {fileID: 1338143177}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1311555053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311555045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e5731e9c6642404eaa2145ce8d46647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorCreakFMOD
+  intensityParam: DoorCreakVelocity
+  door: {fileID: 1311555045}
+  movementThreshold: 0.2
+  intensityMultiplier: 4
 --- !u!1001 &1312150361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35374,7 +35480,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9121915025561407470, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1311555053}
   m_SourcePrefab: {fileID: 100100000, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
 --- !u!4 &1338143178 stripped
 Transform:
@@ -36741,7 +36850,6 @@ MonoBehaviour:
   - {fileID: 1424896335}
   - {fileID: 1137280403}
   flickerDuration: 3
-  flickerVolume: 1
   minFlickerInterval: 0.05
   maxFlickerInterval: 0.2
   fadeInDuration: 3
@@ -38132,6 +38240,155 @@ ReflectionProbe:
   m_UseOcclusionCulling: 1
   m_Importance: 1
   m_CustomBakedTexture: {fileID: 0}
+--- !u!1 &1453812223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1453812224}
+  - component: {fileID: 1453812227}
+  - component: {fileID: 1453812226}
+  - component: {fileID: 1453812225}
+  m_Layer: 0
+  m_Name: Text (TMP) (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1453812224
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453812223}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.7867}
+  m_LocalScale: {x: 1.5030289, y: 1.5030289, z: 1.5030289}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 418937473}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000080578, y: 28.492}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1453812225
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453812223}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1453812226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453812223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "PEDRO S\xC1NCHEZ"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: d27ee6db407997144b87ee231b6e77f4, type: 2}
+  m_sharedMaterial: {fileID: -8546129350834047897, guid: d27ee6db407997144b87ee231b6e77f4, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -18.780487, y: 0, z: -27.645912, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1453812227
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453812223}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1458810097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49386,7 +49643,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -54792,7 +55049,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1

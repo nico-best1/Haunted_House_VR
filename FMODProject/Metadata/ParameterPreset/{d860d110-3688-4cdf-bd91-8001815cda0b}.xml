@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{d860d110-3688-4cdf-bd91-8001815cda0b}">
+		<property name="name">
+			<value>DoorCreakVelocity</value>
+		</property>
+		<relationship name="folder">
+			<destination>{95567c7f-45f2-40a2-8572-bd8e8b235d1b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{315a7e61-5d51-4072-97e9-1900a8c38f6d}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{315a7e61-5d51-4072-97e9-1900a8c38f6d}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

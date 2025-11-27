@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{5c527e90-be26-4745-b860-9b7aad425b57}">
+		<property name="name">
+			<value>CreepySoundChance</value>
+		</property>
+		<relationship name="folder">
+			<destination>{95567c7f-45f2-40a2-8572-bd8e8b235d1b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c9eb29e5-a107-4894-b3a9-f91bd7bd7870}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c9eb29e5-a107-4894-b3a9-f91bd7bd7870}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

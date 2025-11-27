@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{6f1698d0-27b1-4669-b75c-461511686640}">
+	<object class="AudioFile" id="{80e612c2-928f-466a-8eb1-0fe0d0bdcc58}">
 		<property name="assetPath">
-			<value>AudioJuego/SFX/Doors/DoorClose.mp3</value>
+			<value>AudioJuego/SFX/Doors/DoorCreak 5.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>16</value>
+			<value>24</value>
 		</property>
 		<property name="channelCount">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.8720000000000001</value>
+			<value>1.3440000000000001</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{7c9c9fe5-ab57-441f-805f-39351efdc682}</destination>

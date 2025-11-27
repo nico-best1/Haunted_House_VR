@@ -176,6 +176,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8300474273119128641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/DoorCreak/DoorCreakVelocity
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: DoorCreakVelocity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3369564410
+    data2: 2230937539
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-8228207221331802465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,10 +269,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638998609163466416
+  lastModified: 638998708735277703
   FileSizes:
   - Name: Desktop
-    Value: 863712
+    Value: 981984
   Exists: 1
 --- !u!114 &-7000536078853393068
 MonoBehaviour:
@@ -292,7 +316,7 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638998609154081403
+  lastModified: 638998708733511427
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -508,6 +532,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4475961262191599559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient/CreepySoundChance
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: CreepySoundChance
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1227764382
+    data2: 1375948997
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-3304921781153481871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,6 +746,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-931091246139021126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Effects/DoorCreak
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Effects/DoorCreak
+  Guid:
+    Data1: -1271474575
+    Data2: 1304223440
+    Data3: -1208578383
+    Data4: -1153721882
+  Banks:
+  - {fileID: -7123653212959068591}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -8300474273119128641}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &-767407276741764402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -765,13 +841,14 @@ MonoBehaviour:
   - {fileID: 1763842195746639554}
   - {fileID: 1948200038847125918}
   - {fileID: 4065021349579942832}
+  - {fileID: -931091246139021126}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6951638383043566694}
   StringsBanks:
   - {fileID: 3793154789422150260}
   cacheVersion: 131856
-  cacheTime: 638998609163466416
+  cacheTime: 638998708735277703
   SerializableEventsDict:
   - key: event:/Ambience/Tension
     index: 0
@@ -815,6 +892,8 @@ MonoBehaviour:
     index: 19
   - key: event:/SFX/Effects/Cauldron Boiling
     index: 20
+  - key: event:/SFX/Effects/DoorCreak
+    index: 21
 --- !u!114 &152251705565275959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -836,9 +915,10 @@ MonoBehaviour:
   Banks:
   - {fileID: 565750946105225073}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -4475961262191599559}
   MinDistance: 1
   MaxDistance: 20
   Length: 58500
@@ -877,10 +957,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638998560189313234
+  lastModified: 638998687730337239
   FileSizes:
   - Name: Desktop
-    Value: 20887296
+    Value: 20887552
   Exists: 1
 --- !u!114 &790881606638331753
 MonoBehaviour:
@@ -1059,10 +1139,34 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638998560190371456
+  lastModified: 638998691740251985
   FileSizes:
   - Name: Desktop
     Value: 4157056
+  Exists: 1
+--- !u!114 &3236926638274837199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cauldron Boiling/CauldronIntensity
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: CauldronIntensity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2480883671
+    data2: 1663095010
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &3578556599805578406
 MonoBehaviour:
@@ -1107,10 +1211,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638998609154111324
+  lastModified: 638998708733531885
   FileSizes:
   - Name: Desktop
-    Value: 2308
+    Value: 2506
   Exists: 1
 --- !u!114 &3907778696474209899
 MonoBehaviour:
@@ -1182,7 +1286,8 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 3236926638274837199}
   MinDistance: 1
   MaxDistance: 20
   Length: 28025

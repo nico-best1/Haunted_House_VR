@@ -9,7 +9,7 @@ public class FinalMonsterTrigger : MonoBehaviour
     public Transform playerHead; 
     public GameObject blackoutScreen;
     private FMOD.Studio.EventInstance creditsMusicInstance;
-    public TensionAudioController tenseAudio;
+    public TensionAudioController tensionAudioController;
 
     public GameObject creditsManager;
 
@@ -27,7 +27,7 @@ public class FinalMonsterTrigger : MonoBehaviour
         // Aparece el monstruo
         monster.transform.position = monsterStartPos.position;
         monster.SetActive(true);
-        tenseAudio?.StopTension();
+        tensionAudioController.FadeOutTension();
 
         // Empieza a revisar si lo está mirando
         StartCoroutine(CheckIfLookingAtMonster());
@@ -78,6 +78,7 @@ public class FinalMonsterTrigger : MonoBehaviour
     {
         creditsMusicInstance = AudioManager.Instance.CreateInstance(FMODEvents.Instance.creditsMusic);
         creditsMusicInstance.start();
+        creditsMusicInstance.setParameterByName("Intensity", 1);
 
         if (creditsManager != null)
         {

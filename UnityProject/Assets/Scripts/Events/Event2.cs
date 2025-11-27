@@ -6,7 +6,6 @@ public class Event2 : MonoBehaviour
 {
     public List<Light> flickerLights;
     public float flickerDuration = 3f;
-    public float flickerVolume = 1f;
     public float minFlickerInterval = 0.05f;
     public float maxFlickerInterval = 0.2f;
 
@@ -23,8 +22,7 @@ public class Event2 : MonoBehaviour
 
     void Start()
     {
-        tensionSound = FMODUnity.RuntimeManager.CreateInstance(FMODEvents.Instance.tension);
-        tensionSound.start();        
+        tensionSound = FMODUnity.RuntimeManager.CreateInstance(FMODEvents.Instance.tension);        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -54,6 +52,8 @@ public class Event2 : MonoBehaviour
 
     private IEnumerator FadeInBackgroundMusic()
     {
+        tensionSound.start();
+        tensionSound.setParameterByName("Intensity", 0.5f);
         float timer = 0f;
 
         while (timer < fadeInDuration)
