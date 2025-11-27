@@ -5,7 +5,7 @@
 			<value>Tension</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{0c3709e0-5a1e-47a4-98f8-4fd21fd51db4}</destination>
@@ -30,9 +30,6 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{46795dcb-0e66-423c-be70-6ed10302139f}</destination>
-		</relationship>
-		<relationship name="parameters">
-			<destination>{402f2c1c-4281-4086-ab17-5a64b9a561f4}</destination>
 		</relationship>
 		<relationship name="banks">
 			<destination>{7cfbedb8-185a-4d57-9f1a-24f479292d95}</destination>
@@ -84,11 +81,6 @@
 		</relationship>
 		<relationship name="markers">
 			<destination>{885015a3-d7f2-46f5-92ab-7a5954e31a65}</destination>
-		</relationship>
-	</object>
-	<object class="ParameterProxy" id="{402f2c1c-4281-4086-ab17-5a64b9a561f4}">
-		<relationship name="preset">
-			<destination>{745c4386-1bab-4726-8670-2d19fb058644}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{1f3e1cd2-95cf-4b19-8fb0-b159d6c7288e}">
@@ -195,7 +187,6 @@
 	<object class="MixerBusEffectChain" id="{d15976c8-163d-444b-8797-bd953c8ae999}">
 		<relationship name="effects">
 			<destination>{7fb2f106-5479-4659-9e06-72d5a881708b}</destination>
-			<destination>{fee53ee6-aae1-4a2d-b12b-1e827c4bf77a}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{73a6b435-1ca6-4f96-b5b7-9daf612d4996}" />
@@ -249,7 +240,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{7fb2f106-5479-4659-9e06-72d5a881708b}" />
-	<object class="SpatialiserEffect" id="{fee53ee6-aae1-4a2d-b12b-1e827c4bf77a}" />
 	<object class="AutomationPoint" id="{e2b832bd-535e-4470-887e-45483364fe3f}">
 		<property name="position">
 			<value>0</value>
@@ -294,7 +284,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-25</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{8a3f480e-5587-4a78-9b2d-e145d7b51687}">
@@ -302,7 +292,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>5</value>
 		</property>
 	</object>
 </objects>

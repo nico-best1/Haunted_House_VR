@@ -45,7 +45,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7123653212959068591}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -197,7 +197,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7123653212959068591}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -245,10 +245,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638997840629551327
+  lastModified: 638998609163466416
   FileSizes:
   - Name: Desktop
-    Value: 354304
+    Value: 863712
   Exists: 1
 --- !u!114 &-7000536078853393068
 MonoBehaviour:
@@ -292,7 +292,7 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638997840628887546
+  lastModified: 638998609154081403
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -502,12 +502,39 @@ MonoBehaviour:
   Banks:
   - {fileID: -7123653212959068591}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3304921781153481871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Effects/DrawerRoomEvent
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Effects/DrawerRoomEvent
+  Guid:
+    Data1: -790729466
+    Data2: 1278148869
+    Data3: 2129091976
+    Data4: -1832909899
+  Banks:
+  - {fileID: -7123653212959068591}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 372
 --- !u!114 &-2819172060819935980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -647,6 +674,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 552
+--- !u!114 &-987108425046881345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Clock/ClockReverb
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: ClockReverb
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 861197576
+    data2: 4077365323
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-767407276741764402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,36 +720,11 @@ MonoBehaviour:
   - {fileID: 565750946105225073}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -502945024376047121}
+  IsOneShot: 0
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 13500
---- !u!114 &-502945024376047121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind/WindIntensity
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: WindIntensity
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 794563628
-    data2: 3353328698
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,13 +760,18 @@ MonoBehaviour:
   - {fileID: -5299422456422655639}
   - {fileID: -5867600645852792976}
   - {fileID: -8391990173679477098}
+  - {fileID: 152251705565275959}
+  - {fileID: -3304921781153481871}
+  - {fileID: 1763842195746639554}
+  - {fileID: 1948200038847125918}
+  - {fileID: 4065021349579942832}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6951638383043566694}
   StringsBanks:
   - {fileID: 3793154789422150260}
   cacheVersion: 131856
-  cacheTime: 638997840629551327
+  cacheTime: 638998609163466416
   SerializableEventsDict:
   - key: event:/Ambience/Tension
     index: 0
@@ -774,6 +805,43 @@ MonoBehaviour:
     index: 14
   - key: event:/SFX/Player/FlashlightOff
     index: 15
+  - key: event:/Ambience/Ambient
+    index: 16
+  - key: event:/SFX/Effects/DrawerRoomEvent
+    index: 17
+  - key: event:/SFX/Effects/Clock
+    index: 18
+  - key: event:/Ambience/BuildTension
+    index: 19
+  - key: event:/SFX/Effects/Cauldron Boiling
+    index: 20
+--- !u!114 &152251705565275959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Ambient
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambience/Ambient
+  Guid:
+    Data1: 1132802886
+    Data2: 1121823239
+    Data3: 971472768
+    Data4: -1140321139
+  Banks:
+  - {fileID: 565750946105225073}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 58500
 --- !u!114 &170864418733350093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,10 +877,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638997741044865044
+  lastModified: 638998560189313234
   FileSizes:
   - Name: Desktop
-    Value: 374784
+    Value: 20887296
   Exists: 1
 --- !u!114 &790881606638331753
 MonoBehaviour:
@@ -886,13 +954,68 @@ MonoBehaviour:
   Banks:
   - {fileID: 3052108380556607899}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters:
   - {fileID: -8732122025373489542}
   MinDistance: 1
   MaxDistance: 20
   Length: 164022
+--- !u!114 &1763842195746639554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Effects/Clock
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Effects/Clock
+  Guid:
+    Data1: 212014089
+    Data2: 1308685610
+    Data3: 1832440469
+    Data4: -1984579328
+  Banks:
+  - {fileID: -7123653212959068591}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -987108425046881345}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 14917
+--- !u!114 &1948200038847125918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/BuildTension
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambience/BuildTension
+  Guid:
+    Data1: -413668165
+    Data2: 1336384023
+    Data3: 125188744
+    Data4: -1609215576
+  Banks:
+  - {fileID: 565750946105225073}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2975245575614393888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -936,10 +1059,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638997804384038936
+  lastModified: 638998560190371456
   FileSizes:
   - Name: Desktop
-    Value: 4157344
+    Value: 4157056
   Exists: 1
 --- !u!114 &3578556599805578406
 MonoBehaviour:
@@ -984,10 +1107,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638997840628897506
+  lastModified: 638998609154111324
   FileSizes:
   - Name: Desktop
-    Value: 2066
+    Value: 2308
   Exists: 1
 --- !u!114 &3907778696474209899
 MonoBehaviour:
@@ -1036,6 +1159,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 353664
   Exists: 1
+--- !u!114 &4065021349579942832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Effects/Cauldron Boiling
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Effects/Cauldron Boiling
+  Guid:
+    Data1: -391495100
+    Data2: 1246107862
+    Data3: 1095557304
+    Data4: -1201330887
+  Banks:
+  - {fileID: -7123653212959068591}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 28025
 --- !u!114 &4154371129096532389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1300,7 +1450,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7123653212959068591}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -1351,7 +1501,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 565750946105225073}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters:
   - {fileID: 5255399834641838801}

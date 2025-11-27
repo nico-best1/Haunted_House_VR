@@ -43,7 +43,7 @@ public class PuzzleManager : MonoBehaviour
 
         if (correct)
         {
-            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.successSound);
+            AudioManager.Instance.PlayOneShotPosition(FMODEvents.Instance.successSound, door.transform.position);
             var rbDoor = door.GetComponent<Rigidbody>();
             if (rbDoor != null) rbDoor.isKinematic = false;
 

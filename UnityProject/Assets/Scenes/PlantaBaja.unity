@@ -1481,20 +1481,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entryDoor: {fileID: 661672182}
-  entryDoorAudio: {fileID: 0}
   exitDoor: {fileID: 650812591}
   exitWall: {fileID: 960853484}
   pendulum: {fileID: 2051745038}
-  clockAudio: {fileID: 0}
-  flickerLights:
-  - {fileID: 2124493208}
-  flickerDuration: 17
-  flickerSounds:
-  - {fileID: 8300000, guid: e6b4cea06d18e9c47b9121e5b444635f, type: 3}
-  flickerVolume: 1
-  minFlickerInterval: 0.05
-  maxFlickerInterval: 0.2
-  flickerAudio: {fileID: 0}
   playerHead: {fileID: 941035299}
   drawers:
   - {fileID: 1917312022}
@@ -1516,14 +1505,12 @@ MonoBehaviour:
   - {fileID: 1183830450}
   drawerMoveDistance: 0.2
   drawerMoveSpeed: 2
-  drawerHitSounds:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  buildUpTension: {fileID: 0}
+  flickerLights:
+  - {fileID: 2124493208}
+  flickerDuration: 17
+  minFlickerInterval: 0.05
+  maxFlickerInterval: 0.2
+  eventDuration: 20
 --- !u!65 &76412335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12755,6 +12742,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f6ace45e226e84b8453d73df64c7be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
+  <clockSound>k__BackingField:
+    Guid:
+      Data1: 212014089
+      Data2: 1308685610
+      Data3: 1832440469
+      Data4: -1984579328
+    Path: event:/SFX/Effects/Clock
+  <buildUpTension>k__BackingField:
+    Guid:
+      Data1: -413668165
+      Data2: 1336384023
+      Data3: 125188744
+      Data4: -1609215576
+    Path: event:/Ambience/BuildTension
+  <drawerSound>k__BackingField:
+    Guid:
+      Data1: -790729466
+      Data2: 1278148869
+      Data3: 2129091976
+      Data4: -1832909899
+    Path: event:/SFX/Effects/DrawerRoomEvent
   <flashlightOn>k__BackingField:
     Guid:
       Data1: -889708732
@@ -32921,6 +32929,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   velocidadMaxima: 2.4
+  suavizado: 6
 --- !u!114 &1229942711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35280,27 +35289,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.93046194
+      value: 0.9952478
       objectReference: {fileID: 0}
     - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.93046194
+      value: 0.9952478
       objectReference: {fileID: 0}
     - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.93046194
+      value: 0.9952478
       objectReference: {fileID: 0}
     - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.14506
+      value: 0.14649
       objectReference: {fileID: 0}
     - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.63679
+      value: 0.68144
       objectReference: {fileID: 0}
     - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.042
+      value: -0.04449
       objectReference: {fileID: 0}
     - target: {fileID: 7115994224307813692, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_LocalScale.x
@@ -59844,13 +59853,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051745038}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8050bf54783a3f54bb90f9b0a7f1bb1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pendulum: {fileID: 2051745039}
-  clockAudio: {fileID: 0}
   swingSpeed: 3
   swingAngle: 5
 --- !u!1001 &2051887611

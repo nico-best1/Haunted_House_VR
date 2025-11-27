@@ -24,8 +24,7 @@ public class Event2 : MonoBehaviour
     void Start()
     {
         tensionSound = FMODUnity.RuntimeManager.CreateInstance(FMODEvents.Instance.tension);
-        tensionSound.start();
-        AudioManager.Instance.PlayOneShotPosition(FMODEvents.Instance.wind, transform.position);   
+        tensionSound.start();        
     }
 
     private void OnTriggerEnter(Collider other)

@@ -5,7 +5,7 @@
 			<value>PuzzleCube</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{b7b0c218-8a4e-42ce-8fea-a2884ad1b888}</destination>
@@ -96,7 +96,6 @@
 	<object class="MixerBusEffectChain" id="{4500da9d-cdcc-4cca-8532-6e4813dea456}">
 		<relationship name="effects">
 			<destination>{55eb651a-7f9c-4e81-b908-40daaa9da4d0}</destination>
-			<destination>{2057dd16-aa37-40d9-9515-59b4acf0008b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{e03ba0ea-1c3c-4bab-a17a-0401613be816}" />
@@ -107,5 +106,4 @@
 	</object>
 	<object class="MixerBusFader" id="{9ba6ee68-461e-47b5-8178-ec57a09d869d}" />
 	<object class="MixerBusFader" id="{55eb651a-7f9c-4e81-b908-40daaa9da4d0}" />
-	<object class="SpatialiserEffect" id="{2057dd16-aa37-40d9-9515-59b4acf0008b}" />
 </objects>

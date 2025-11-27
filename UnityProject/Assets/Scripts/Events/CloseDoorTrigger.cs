@@ -18,9 +18,7 @@ public class CloseDoorTrigger : MonoBehaviour
         hasTriggered = true;
 
         PendulumIdleController idleController = pendulum.GetComponent<PendulumIdleController>();
-        if (idleController != null)
-            idleController.StopPendulum();
-
+        idleController.StopClockSound();
 
         CloseDoor();
     }

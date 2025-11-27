@@ -22,7 +22,7 @@ public class MaterialPuzzleManager : MonoBehaviour
 
         if (currentMat == correctMaterial)
         {
-            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.successSound);
+            AudioManager.Instance.PlayOneShotPosition(FMODEvents.Instance.successSound, doorToUnlock.transform.position);
             UnlockDoor();
         }
         else

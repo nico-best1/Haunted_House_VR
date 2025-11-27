@@ -3,6 +3,15 @@ using FMODUnity;
 
 public class FMODEvents : MonoBehaviour
 {
+    [field: Header("Clock Sound")]
+    [field: SerializeField] public EventReference clockSound { get; private set; }
+
+    [field: Header("Build Up Tension")]
+    [field: SerializeField] public EventReference buildUpTension { get; private set; }
+
+    [field: Header("Drawer Sound")]
+    [field: SerializeField] public EventReference drawerSound { get; private set; }
+
     [field: Header("Flashlight On")]
     [field: SerializeField] public EventReference flashlightOn { get; private set; }
 

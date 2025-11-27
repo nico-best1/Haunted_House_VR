@@ -19,6 +19,7 @@ public class CreditsSequence : MonoBehaviour
     {
         finalTrigger = FindFirstObjectByType<FinalMonsterTrigger>();
         musicInstance = finalTrigger.GetCreditsMusicInstance();
+        musicInstance.setParameterByName("Intensity", 1);
         StartCoroutine(PlayCredits());
     }
 

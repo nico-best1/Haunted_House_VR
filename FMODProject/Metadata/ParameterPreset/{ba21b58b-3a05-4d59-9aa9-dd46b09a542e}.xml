@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{ba21b58b-3a05-4d59-9aa9-dd46b09a542e}">
+		<property name="name">
+			<value>ClockReverb</value>
+		</property>
+		<relationship name="folder">
+			<destination>{95567c7f-45f2-40a2-8572-bd8e8b235d1b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7e132c20-30d0-41c1-9315-ca85ead49211}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7e132c20-30d0-41c1-9315-ca85ead49211}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

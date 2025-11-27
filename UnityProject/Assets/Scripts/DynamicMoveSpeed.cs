@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.Locomotion;
 using UnityEngine.XR.Interaction.Toolkit.Locomotion.Movement;
@@ -12,6 +12,10 @@ public class DynamicMoveSpeed : MonoBehaviour
     private FMOD.Studio.EventInstance footStepsSound;
     private bool footStepsStarted = false;
 
+    // --- NUEVO: suavizado del parámetro para que no se corte ---
+    private float velocidadSuavizada = 0f;
+    public float suavizado = 6f;  // puedes ajustar → 4 suave | 8 más reactivo
+
     private void Start()
     {
         footStepsSound = FMODUnity.RuntimeManager.CreateInstance(FMODEvents.Instance.playerFootsteps);
@@ -23,13 +27,27 @@ public class DynamicMoveSpeed : MonoBehaviour
     {
         Vector2 input = joystick.action.ReadValue<Vector2>();
         float intensidad = input.magnitude;
-        float nuevaVelocidad = velocidadMaxima * intensidad;
 
-        moveProvider.moveSpeed = nuevaVelocidad;
+        // Suaviza cambios de velocidad para evitar silencios
+        velocidadSuavizada = Mathf.Lerp(velocidadSuavizada, intensidad, suavizado * Time.deltaTime);
 
-        if (footStepsStarted)
+        moveProvider.moveSpeed = velocidadMaxima * velocidadSuavizada;
+
+        if (velocidadSuavizada > 0.05f)
         {
-            footStepsSound.setParameterByName("Velocidad", intensidad);
+            if (!footStepsStarted)
+            {
+                footStepsSound.start();
+                footStepsStarted = true;
+            }
+
+            // Parámetro mucho más estable → el loop ya no se rompe
+            footStepsSound.setParameterByName("Velocidad", Mathf.Clamp01(velocidadSuavizada));
+        }
+        else
+        {
+            footStepsSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            footStepsStarted = false;
         }
     }
 
