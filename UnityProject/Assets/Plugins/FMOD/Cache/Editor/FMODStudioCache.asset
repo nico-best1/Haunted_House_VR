@@ -176,6 +176,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8261331360417495120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind/WindIntensity
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: WindIntensity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 794563628
+    data2: 3353328698
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-8228207221331802465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +316,7 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638999457225078648
+  lastModified: 638999482825202412
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -711,13 +735,14 @@ MonoBehaviour:
   - {fileID: 4824936782531457666}
   - {fileID: 2091837460381278003}
   - {fileID: 1267052134341331728}
+  - {fileID: 1041345080120361503}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6951638383043566694}
   StringsBanks:
   - {fileID: 3793154789422150260}
   cacheVersion: 131856
-  cacheTime: 638999457226017833
+  cacheTime: 638999482825212381
   SerializableEventsDict:
   - key: event:/Ambience/Tension
     index: 0
@@ -749,17 +774,17 @@ MonoBehaviour:
     index: 13
   - key: event:/SFX/Player/FlashlightOff
     index: 14
-  - key: event:/SFX/Effects/DrawerRoomEvent
-    index: 15
   - key: event:/SFX/Effects/Clock
-    index: 16
+    index: 15
   - key: event:/Ambience/BuildTension
-    index: 17
+    index: 16
   - key: event:/SFX/Effects/Cauldron Boiling
-    index: 18
+    index: 17
   - key: event:/Ambience/CreepySounds
-    index: 19
+    index: 18
   - key: event:/Ambience/Ambience
+    index: 19
+  - key: event:/SFX/Effects/DrawerClose
     index: 20
 --- !u!114 &170864418733350093
 MonoBehaviour:
@@ -796,10 +821,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638999313550217633
+  lastModified: 638999482825162507
   FileSizes:
   - Name: Desktop
-    Value: 20575616
+    Value: 20785280
   Exists: 1
 --- !u!114 &790881606638331753
 MonoBehaviour:
@@ -825,6 +850,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &1041345080120361503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Wind
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambience/Wind
+  Guid:
+    Data1: -1590845179
+    Data2: 1134394655
+    Data3: -1404625011
+    Data4: 1160509639
+  Banks:
+  - {fileID: 565750946105225073}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -8261331360417495120}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 16800
 --- !u!114 &1078762347366985464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1105,10 +1158,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638999457225109279
+  lastModified: 638999482825212381
   FileSizes:
   - Name: Desktop
-    Value: 2408
+    Value: 2486
   Exists: 1
 --- !u!114 &3907778696474209899
 MonoBehaviour:

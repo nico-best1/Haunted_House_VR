@@ -11,6 +11,7 @@ public class Event2 : MonoBehaviour
 
     public AmbienceController ambienceController;
     public CreepySoundsController creepySoundsController;
+    public WindAudioController windController;
     public float fadeInDuration = 3f;
 
     public Event1 previousEvent;
@@ -43,6 +44,7 @@ public class Event2 : MonoBehaviour
 
         creepySoundsController.StartCreepySounds();
         ambienceController.FadeIn();
+        windController.FadeOut();
 
         StartCoroutine(FlickerLights());
 

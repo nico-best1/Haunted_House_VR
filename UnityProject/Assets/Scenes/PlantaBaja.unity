@@ -5255,6 +5255,74 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1100630763729056644, guid: 57d5dc6646524b5419bcca82fb772395, type: 3}
   m_PrefabInstance: {fileID: 258514089}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &259054274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 259054275}
+  - component: {fileID: 259054276}
+  - component: {fileID: 259054277}
+  m_Layer: 0
+  m_Name: WindTrigguer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &259054275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259054274}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.053, y: 0, z: 3.164}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1756659784}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &259054276
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259054274}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.725071, y: 2.1048653, z: 0.099710405}
+  m_Center: {x: -0.13719893, y: 0.55243266, z: 0.4501448}
+--- !u!114 &259054277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259054274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4a8f043efa4ec646ac62f4240769037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WindAudioController
+  fadeDuration: 3
+  windSource: {fileID: 1095052939}
 --- !u!1 &259823065
 GameObject:
   m_ObjectHideFlags: 0
@@ -12861,6 +12929,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f6ace45e226e84b8453d73df64c7be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
+  <wind>k__BackingField:
+    Guid:
+      Data1: -1590845179
+      Data2: 1134394655
+      Data3: -1404625011
+      Data4: 1160509639
+    Path: event:/Ambience/Wind
   <creepySounds>k__BackingField:
     Guid:
       Data1: 676083300
@@ -30352,6 +30427,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 319803775}
   m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
+--- !u!1 &1095052939 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7379153627340621520, guid: a528c40e620e3ea4585358856549b650, type: 3}
+  m_PrefabInstance: {fileID: 1040540659}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1097838329
 GameObject:
   m_ObjectHideFlags: 0
@@ -36896,6 +36976,7 @@ MonoBehaviour:
   maxFlickerInterval: 0.2
   ambienceController: {fileID: 22179326}
   creepySoundsController: {fileID: 1768128252}
+  windController: {fileID: 259054277}
   fadeInDuration: 3
   previousEvent: {fileID: 1363467177}
   ghost: {fileID: 1273825788}
@@ -49023,6 +49104,7 @@ Transform:
   - {fileID: 888663551}
   - {fileID: 1515176540}
   - {fileID: 1449086305}
+  - {fileID: 259054275}
   m_Father: {fileID: 1468700860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1756979225 stripped
