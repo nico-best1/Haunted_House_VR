@@ -245,7 +245,7 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638999450098057538
+  lastModified: 638999457226017833
   FileSizes:
   - Name: Desktop
     Value: 864544
@@ -292,7 +292,7 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638999313470687074
+  lastModified: 638999457225078648
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -508,33 +508,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-3304921781153481871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Effects/DrawerRoomEvent
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFX/Effects/DrawerRoomEvent
-  Guid:
-    Data1: -790729466
-    Data2: 1278148869
-    Data3: 2129091976
-    Data4: -1832909899
-  Banks:
-  - {fileID: -7123653212959068591}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 372
 --- !u!114 &-2819172060819935980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,19 +705,19 @@ MonoBehaviour:
   - {fileID: -5299422456422655639}
   - {fileID: -5867600645852792976}
   - {fileID: -8391990173679477098}
-  - {fileID: -3304921781153481871}
   - {fileID: 1763842195746639554}
   - {fileID: 1948200038847125918}
   - {fileID: 4065021349579942832}
   - {fileID: 4824936782531457666}
   - {fileID: 2091837460381278003}
+  - {fileID: 1267052134341331728}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6951638383043566694}
   StringsBanks:
   - {fileID: 3793154789422150260}
   cacheVersion: 131856
-  cacheTime: 638999450098057538
+  cacheTime: 638999457226017833
   SerializableEventsDict:
   - key: event:/Ambience/Tension
     index: 0
@@ -879,6 +852,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1267052134341331728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Effects/DrawerClose
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Effects/DrawerClose
+  Guid:
+    Data1: -790729466
+    Data2: 1278148869
+    Data3: 2129091976
+    Data4: -1832909899
+  Banks:
+  - {fileID: -7123653212959068591}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 372
 --- !u!114 &1306470049109154678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1105,10 +1105,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638999313470711342
+  lastModified: 638999457225109279
   FileSizes:
   - Name: Desktop
-    Value: 2412
+    Value: 2408
   Exists: 1
 --- !u!114 &3907778696474209899
 MonoBehaviour:

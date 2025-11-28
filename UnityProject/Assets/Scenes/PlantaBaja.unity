@@ -1553,7 +1553,7 @@ MonoBehaviour:
   drawerMoveSpeed: 2
   flickerLights:
   - {fileID: 2124493208}
-  flickerDuration: 10
+  flickerDuration: 15
   minFlickerInterval: 0.05
   maxFlickerInterval: 0.2
   eventDuration: 10
@@ -12902,7 +12902,7 @@ MonoBehaviour:
       Data2: 1278148869
       Data3: 2129091976
       Data4: -1832909899
-    Path: event:/SFX/Effects/DrawerRoomEvent
+    Path: event:/SFX/Effects/DrawerClose
   <flashlightOn>k__BackingField:
     Guid:
       Data1: -889708732
@@ -35437,15 +35437,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9952478
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9952478
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.9952478
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35457,7 +35457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6201249468442611051, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.04449
+      value: -0.038
       objectReference: {fileID: 0}
     - target: {fileID: 7115994224307813692, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       propertyPath: m_LocalScale.x

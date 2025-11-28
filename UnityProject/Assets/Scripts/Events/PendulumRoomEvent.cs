@@ -169,27 +169,39 @@ public class PendulumRoomEvent_FMOD : MonoBehaviour
 
 
     // ============================================================
-    //  DRAWERS — con sonido OneShot repartido por la habitación
+    // DRAWERS — cada cajón se abre y cierra de manera aleatoria
     // ============================================================
     IEnumerator MoveDrawers()
     {
-        while (!eventFinished)
+        // Para cada cajón, arrancamos una corrutina independiente
+        for (int i = 0; i < drawers.Count; i++)
         {
-            for (int i = 0; i < drawers.Count; i++)
-                StartCoroutine(OpenCloseDrawer(drawers[i], drawerOriginalPositions[i]));
-
-            yield return new WaitForSeconds(Random.Range(1f, 2f));
+            StartCoroutine(DrawerRoutine(drawers[i], drawerOriginalPositions[i]));
         }
+
+        yield break; // ya no necesitamos un while global
     }
 
-    IEnumerator OpenCloseDrawer(Transform drawer, Vector3 originalPos)
+    IEnumerator DrawerRoutine(Transform drawer, Vector3 originalPos)
     {
-        Vector3 openPos = originalPos + drawer.forward * drawerMoveDistance;
-        yield return MoveTo(drawer, openPos);
-        PlayDrawerSoundAt(drawer.position);
+        while (!eventFinished)
+        {
+            // Espera un tiempo aleatorio antes de abrir
+            float waitBeforeOpen = Random.Range(1f, 3f);
+            yield return new WaitForSeconds(waitBeforeOpen);
 
-        yield return MoveTo(drawer, originalPos);
-        PlayDrawerSoundAt(drawer.position);
+            // Abrir cajón
+            Vector3 openPos = originalPos + drawer.forward * drawerMoveDistance;
+            yield return MoveTo(drawer, openPos);
+
+            // Espera un tiempo aleatorio antes de cerrar
+            float waitBeforeClose = Random.Range(0.5f, 1.5f);
+            yield return new WaitForSeconds(waitBeforeClose);
+
+            // Cerrar cajón
+            yield return MoveTo(drawer, originalPos);
+            PlayDrawerSoundAt(drawer.position);
+        }
     }
 
     void PlayDrawerSoundAt(Vector3 pos)
