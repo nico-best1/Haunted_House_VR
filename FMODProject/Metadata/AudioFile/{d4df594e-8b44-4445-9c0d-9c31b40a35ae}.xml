@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{d4df594e-8b44-4445-9c0d-9c31b40a35ae}">
 		<property name="assetPath">
-			<value>AudioJuego/Ambience/DoorOpening.mp3</value>
+			<value>AudioJuego/Ambience/Creepy Sounds/CreepySound 3.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

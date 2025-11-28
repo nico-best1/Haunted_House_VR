@@ -6,7 +6,8 @@ using System.Collections;
 public class TensionAudioController : MonoBehaviour
 {
     private EventInstance tension;
-
+    public AmbienceController ambienceController;
+    public CreepySoundsController creepySoundsController;
     [Header("FMOD PARAMETER NAME")]
     public string parameterName = "TensionIntensity";
 
@@ -25,7 +26,11 @@ public class TensionAudioController : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
             FadeInTension();
+            ambienceController.FadeOut();
+            creepySoundsController.StopCreepySounds();
+        }
     }
 
     public void FadeInTension()

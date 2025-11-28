@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{65458208-e3f9-4586-a8e5-de012c040a55}">
 		<property name="assetPath">
-			<value>AudioJuego/Ambience/FallingOfHeavyObject.mp3</value>
+			<value>AudioJuego/Ambience/Creepy Sounds/CreepySound 4.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

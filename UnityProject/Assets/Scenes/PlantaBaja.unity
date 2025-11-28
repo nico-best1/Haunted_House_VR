@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
+  m_AmbientSkyColor: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 2
@@ -499,6 +499,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7958724416419102360, guid: 90d62df2fc6e36646aaaf4a0e1b00d2c, type: 3}
   m_PrefabInstance: {fileID: 20307181}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &22179324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 22179325}
+  - component: {fileID: 22179326}
+  m_Layer: 0
+  m_Name: AmbienceAudioController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &22179325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22179324}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2079287898}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &22179326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22179324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9636db5d39c7e4fbf6dd3bd6278930, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AmbienceController
+  fadeInDuration: 3
+  fadeOutDuration: 2
 --- !u!1 &29909947
 GameObject:
   m_ObjectHideFlags: 0
@@ -5845,7 +5891,7 @@ Transform:
   m_GameObject: {fileID: 317082793}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.489, y: -2.973, z: -3.555}
+  m_LocalPosition: {x: -17.489, y: -2.656, z: -3.555}
   m_LocalScale: {x: 1, y: 4.9786654, z: 5.0834723}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5864,8 +5910,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CauldronSoundController
   parameterName: CauldronIntensity
-  fadeInDuration: 5
-  fadeOutDuration: 3
+  fadeInDuration: 3
+  fadeOutDuration: 2
   cauldronsObjects:
   - {fileID: 127642022}
   - {fileID: 139637429}
@@ -8094,7 +8140,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 941035302}
-  m_PlaneDistance: 3
+  m_PlaneDistance: 0.5
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -12818,13 +12864,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f6ace45e226e84b8453d73df64c7be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
-  <doorCreak>k__BackingField:
+  <creepySounds>k__BackingField:
     Guid:
-      Data1: -1271474575
-      Data2: 1304223440
-      Data3: -1208578383
-      Data4: -1153721882
-    Path: event:/SFX/Effects/DoorCreak
+      Data1: 676083300
+      Data2: 1240694685
+      Data3: -39338569
+      Data4: 1497701992
+    Path: event:/Ambience/CreepySounds
+  <ambience>k__BackingField:
+    Guid:
+      Data1: 1132802886
+      Data2: 1121823239
+      Data3: 971472768
+      Data4: -1140321139
+    Path: event:/Ambience/Ambience
   <cauldronBoiling>k__BackingField:
     Guid:
       Data1: -391495100
@@ -29238,9 +29291,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7433e4d440055034599a0409cd2aa7ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TensionAudioController
+  ambienceController: {fileID: 22179326}
+  creepySoundsController: {fileID: 1768128252}
   parameterName: TensionIntensity
-  fadeInDuration: 6
-  fadeOutDuration: 1
+  fadeInDuration: 2
+  fadeOutDuration: 3
 --- !u!4 &1024657373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8619810336792446185, guid: d2fdb08bf4ada3a468116aa81d86bba8, type: 3}
@@ -35011,6 +35066,7 @@ MonoBehaviour:
   door: {fileID: 1311555045}
   movementThreshold: 0.2
   intensityMultiplier: 4
+  lastAngle: 0
 --- !u!1001 &1312150361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36852,6 +36908,8 @@ MonoBehaviour:
   flickerDuration: 3
   minFlickerInterval: 0.05
   maxFlickerInterval: 0.2
+  ambienceController: {fileID: 22179326}
+  creepySoundsController: {fileID: 1768128252}
   fadeInDuration: 3
   previousEvent: {fileID: 1363467177}
   ghost: {fileID: 1273825788}
@@ -49322,6 +49380,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 4148c8684d5479f47b42a3a80837379d, type: 3}
   m_PrefabInstance: {fileID: 1141720832}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1768128250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1768128251}
+  - component: {fileID: 1768128252}
+  m_Layer: 0
+  m_Name: 'CreepySoundsController '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1768128251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768128250}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2079287898}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1768128252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768128250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3fa8d4ac9567f4438c1af4f36b73b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CreepySoundsController
+  minDelay: 17
+  maxDelay: 25
+  minRadius: 10
+  maxRadius: 14
+  creepyParam: CreepySoundChance
+  paramValue: 1
+  player: {fileID: 150705064}
 --- !u!1001 &1774434642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61081,6 +61190,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 645794298}
+  - {fileID: 22179325}
+  - {fileID: 1768128251}
   m_Father: {fileID: 616837439}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2079287899

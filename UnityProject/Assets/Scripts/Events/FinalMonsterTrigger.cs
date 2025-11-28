@@ -78,7 +78,7 @@ public class FinalMonsterTrigger : MonoBehaviour
     {
         creditsMusicInstance = AudioManager.Instance.CreateInstance(FMODEvents.Instance.creditsMusic);
         creditsMusicInstance.start();
-        creditsMusicInstance.setParameterByName("Intensity", 1);
+        creditsMusicInstance.setParameterByName("CreditsMusicIntensity", 1);
 
         if (creditsManager != null)
         {

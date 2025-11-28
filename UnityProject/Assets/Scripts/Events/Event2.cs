@@ -9,7 +9,8 @@ public class Event2 : MonoBehaviour
     public float minFlickerInterval = 0.05f;
     public float maxFlickerInterval = 0.2f;
 
-
+    public AmbienceController ambienceController;
+    public CreepySoundsController creepySoundsController;
     public float fadeInDuration = 3f;
 
     public Event1 previousEvent;
@@ -40,7 +41,8 @@ public class Event2 : MonoBehaviour
     {
         AudioManager.Instance.PlayOneShot(FMODEvents.Instance.strongStringJumpscare);
 
-        StartCoroutine(FadeInBackgroundMusic());
+        creepySoundsController.StartCreepySounds();
+        ambienceController.FadeIn();
 
         StartCoroutine(FlickerLights());
 
@@ -48,25 +50,6 @@ public class Event2 : MonoBehaviour
             StartCoroutine(ghost.MoveAcross());
 
         yield return null;
-    }
-
-    private IEnumerator FadeInBackgroundMusic()
-    {
-        tensionSound.start();
-        tensionSound.setParameterByName("Intensity", 0.5f);
-        float timer = 0f;
-
-        while (timer < fadeInDuration)
-        {
-            timer += Time.deltaTime;
-
-            float value = Mathf.Lerp(0f, 1f, timer / fadeInDuration);
-            tensionSound.setParameterByName("Intensity", value);
-
-            yield return null;
-        }
-
-        tensionSound.setParameterByName("Intensity", 1f);
     }
 
     private IEnumerator FlickerLights()

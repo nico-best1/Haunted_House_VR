@@ -244,11 +244,7 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{34b33b5f-589f-4f76-a016-98d7af74ae42}" />
-	<object class="SpatialiserEffect" id="{268ba936-c150-40ab-bc20-6ad26200f11c}">
-		<property name="distanceRolloffType">
-			<value>2</value>
-		</property>
-	</object>
+	<object class="SpatialiserEffect" id="{268ba936-c150-40ab-bc20-6ad26200f11c}" />
 	<object class="AutomationPoint" id="{b452e574-3759-4a5d-b7a1-f07a8b05a140}">
 		<property name="position">
 			<value>0</value>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{39bd1f3c-18e1-4d87-9b21-029372bb70de}">
+	<object class="AudioFile" id="{77da6552-cb5d-437c-be70-faed22c55e77}">
 		<property name="assetPath">
-			<value>AudioJuego/Ambience/DoorCreaking.mp3</value>
+			<value>AudioJuego/Ambience/Creepy Sounds/CreepySound 1.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
 		</property>
 		<property name="channelCount">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="length">
-			<value>8.0979591836734688</value>
+			<value>2.2204081632653061</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{7c9c9fe5-ab57-441f-805f-39351efdc682}</destination>
