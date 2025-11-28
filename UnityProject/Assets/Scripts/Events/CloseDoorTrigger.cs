@@ -39,7 +39,6 @@ public class CloseDoorTrigger : MonoBehaviour
         }
 
         AudioManager.Instance.PlayOneShotPosition(FMODEvents.Instance.doorClosedSound, this.transform.position);
-        FindFirstObjectByType<CauldronSoundController>().FadeOutAll();
-
+        
     }
 }

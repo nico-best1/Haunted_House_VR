@@ -8,6 +8,7 @@ public class TensionAudioController : MonoBehaviour
     private EventInstance tension;
     public AmbienceController ambienceController;
     public CreepySoundsController creepySoundsController;
+    public CauldronSoundController cauldronSoundController;
     [Header("FMOD PARAMETER NAME")]
     public string parameterName = "TensionIntensity";
 
@@ -30,6 +31,7 @@ public class TensionAudioController : MonoBehaviour
             FadeInTension();
             ambienceController.FadeOut();
             creepySoundsController.StopCreepySounds();
+            cauldronSoundController.FadeOut();  
         }
     }
 

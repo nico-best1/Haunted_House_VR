@@ -5874,7 +5874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 317082794}
   - component: {fileID: 317082796}
-  - component: {fileID: 317082795}
+  - component: {fileID: 317082797}
   m_Layer: 0
   m_Name: CauldronsSoundTrigguer
   m_TagString: Untagged
@@ -5897,26 +5897,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 502319113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &317082795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 317082793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5d527e91342db842924f102e6af4fdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CauldronSoundController
-  parameterName: CauldronIntensity
-  fadeInDuration: 3
-  fadeOutDuration: 2
-  cauldronsObjects:
-  - {fileID: 127642022}
-  - {fileID: 139637429}
-  - {fileID: 342086306}
-  - {fileID: 1444836007}
 --- !u!65 &317082796
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5938,6 +5918,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.009008408, y: 1, z: 1}
   m_Center: {x: -0.4954958, y: 0, z: 0}
+--- !u!114 &317082797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317082793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d527e91342db842924f102e6af4fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CauldronSoundController
+  parameterName: CauldronIntensity
+  fadeInDuration: 2
+  fadeOutDuration: 2
+  cauldronObject: {fileID: 342086306}
 --- !u!1001 &319414291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12956,13 +12952,6 @@ MonoBehaviour:
       Data3: 2056440459
       Data4: -274780000
     Path: event:/Ambience/Tension
-  <wind>k__BackingField:
-    Guid:
-      Data1: -144546614
-      Data2: 1155388535
-      Data3: 2004970898
-      Data4: 860850020
-    Path: event:/Ambience/Wind
   <flickerLights>k__BackingField:
     Guid:
       Data1: 1279048545
@@ -29294,6 +29283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TensionAudioController
   ambienceController: {fileID: 22179326}
   creepySoundsController: {fileID: 1768128252}
+  cauldronSoundController: {fileID: 0}
   parameterName: TensionIntensity
   fadeInDuration: 2
   fadeOutDuration: 3
@@ -35063,11 +35053,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e5731e9c6642404eaa2145ce8d46647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorCreakFMOD
-  intensityParam: DoorCreakVelocity
-  door: {fileID: 1311555045}
-  movementThreshold: 0.2
-  intensityMultiplier: 4
-  lastAngle: 0
 --- !u!1001 &1312150361
 PrefabInstance:
   m_ObjectHideFlags: 0
