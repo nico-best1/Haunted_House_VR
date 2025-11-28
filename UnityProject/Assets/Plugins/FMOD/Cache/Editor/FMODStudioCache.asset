@@ -245,10 +245,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638999289010634784
+  lastModified: 638999366605239516
   FileSizes:
   - Name: Desktop
-    Value: 864128
+    Value: 864352
   Exists: 1
 --- !u!114 &-7000536078853393068
 MonoBehaviour:
@@ -744,52 +744,50 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 3793154789422150260}
   cacheVersion: 131856
-  cacheTime: 638999313550217633
+  cacheTime: 638999366605239516
   SerializableEventsDict:
   - key: event:/Ambience/Tension
     index: 0
-  - key: event:/Ambience/Wind
-    index: 1
   - key: event:/Music/CreditsMusic
-    index: 2
+    index: 1
   - key: event:/Music/GramophoneMusic
-    index: 3
+    index: 2
   - key: event:/SFX/Puzzles/FaiPuzzle
-    index: 4
+    index: 3
   - key: event:/SFX/Effects/ObjectsImpact
-    index: 5
+    index: 4
   - key: event:/SFX/Jumpscares/StrongString
-    index: 6
+    index: 5
   - key: event:/SFX/Effects/FlickerLights
-    index: 7
+    index: 6
   - key: event:/SFX/Puzzles/SuccessPuzzle
-    index: 8
+    index: 7
   - key: event:/SFX/Effects/FillCup
-    index: 9
+    index: 8
   - key: event:/SFX/Jumpscares/FinalJumpsacare
-    index: 10
+    index: 9
   - key: event:/SFX/Puzzles/PuzzleCube
-    index: 11
+    index: 10
   - key: event:/SFX/Player/PlayerFootsteps
-    index: 12
+    index: 11
   - key: event:/SFX/Effects/DoorClosed
-    index: 13
+    index: 12
   - key: event:/SFX/Player/FlashlightOn
-    index: 14
+    index: 13
   - key: event:/SFX/Player/FlashlightOff
-    index: 15
+    index: 14
   - key: event:/SFX/Effects/DrawerRoomEvent
-    index: 16
+    index: 15
   - key: event:/SFX/Effects/Clock
-    index: 17
+    index: 16
   - key: event:/Ambience/BuildTension
-    index: 18
+    index: 17
   - key: event:/SFX/Effects/Cauldron Boiling
-    index: 19
+    index: 18
   - key: event:/Ambience/CreepySounds
-    index: 20
+    index: 19
   - key: event:/Ambience/Ambience
-    index: 21
+    index: 20
 --- !u!114 &170864418733350093
 MonoBehaviour:
   m_ObjectHideFlags: 0
