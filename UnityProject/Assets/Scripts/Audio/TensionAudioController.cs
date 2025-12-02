@@ -9,6 +9,7 @@ public class TensionAudioController : MonoBehaviour
     public AmbienceController ambienceController;
     public CreepySoundsController creepySoundsController;
     public CauldronSoundController cauldronSoundController;
+    public EventInstance breathEvent;
     [Header("FMOD PARAMETER NAME")]
     public string parameterName = "TensionIntensity";
 
@@ -29,6 +30,8 @@ public class TensionAudioController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             FadeInTension();
+            breathEvent = AudioManager.Instance.CreateInstance(FMODEvents.Instance.breath);
+            breathEvent.start();
             ambienceController.FadeOut();
             creepySoundsController.StopCreepySounds();
             cauldronSoundController.FadeOut();  
@@ -86,6 +89,9 @@ public class TensionAudioController : MonoBehaviour
         tension.setParameterByName(parameterName, 0f);
         tension.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         tension.release();
+
+        breathEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        breathEvent.release();
 
         isFading = false;
     }

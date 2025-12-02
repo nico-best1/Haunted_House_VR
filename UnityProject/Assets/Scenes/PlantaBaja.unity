@@ -7367,13 +7367,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7989535145125595271, guid: 0583a266c6ddd694bab0c66cb74721f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 379577204}
   m_SourcePrefab: {fileID: 100100000, guid: 0583a266c6ddd694bab0c66cb74721f0, type: 3}
 --- !u!4 &379577202 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6393948439794891412, guid: 0583a266c6ddd694bab0c66cb74721f0, type: 3}
   m_PrefabInstance: {fileID: 379577201}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &379577203 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7989535145125595271, guid: 0583a266c6ddd694bab0c66cb74721f0, type: 3}
+  m_PrefabInstance: {fileID: 379577201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &379577204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379577203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1bffa003aa8054f88f34d15145a995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SurfaceType
+  tipo: 1
 --- !u!1001 &383470030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9581,7 +9602,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9121915025561407470, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 651519045}
   m_SourcePrefab: {fileID: 100100000, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
 --- !u!4 &500029080 stripped
 Transform:
@@ -12929,6 +12953,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f6ace45e226e84b8453d73df64c7be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
+  <doorCreak>k__BackingField:
+    Guid:
+      Data1: -59040096
+      Data2: 1216690913
+      Data3: -675019860
+      Data4: -650886493
+    Path: event:/SFX/Effects/DoorCreak
+  <breath>k__BackingField:
+    Guid:
+      Data1: -1335984348
+      Data2: 1209694395
+      Data3: 24211391
+      Data4: 158770573
+    Path: event:/SFX/Effects/Breath
   <wind>k__BackingField:
     Guid:
       Data1: -1590845179
@@ -13143,6 +13181,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9121915025561407470, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
   m_PrefabInstance: {fileID: 500029079}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &651519045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651519037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fa06f986f68cf4a8cfa44b5750af35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorCreakOneShotsVR
+  creakThreshold: 15
+  cooldown: 0.25
 --- !u!4 &659290431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4653786702808938, guid: fb71d571078e952469f83dcc9bb68890, type: 3}
@@ -13153,6 +13205,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9121915025561407470, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
   m_PrefabInstance: {fileID: 1151671466}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &661672190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661672182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fa06f986f68cf4a8cfa44b5750af35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorCreakOneShotsVR
+  creakThreshold: 15
+  cooldown: 0.25
 --- !u!1001 &670554815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29358,7 +29424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TensionAudioController
   ambienceController: {fileID: 22179326}
   creepySoundsController: {fileID: 1768128252}
-  cauldronSoundController: {fileID: 0}
+  cauldronSoundController: {fileID: 317082797}
   parameterName: TensionIntensity
   fadeInDuration: 2
   fadeOutDuration: 3
@@ -31015,8 +31081,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 4148c8684d5479f47b42a3a80837379d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1763123024}
   m_SourcePrefab: {fileID: 100100000, guid: 4148c8684d5479f47b42a3a80837379d, type: 3}
+--- !u!1 &1141720833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 4148c8684d5479f47b42a3a80837379d, type: 3}
+  m_PrefabInstance: {fileID: 1141720832}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1143373134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31342,6 +31416,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6096271716228517679, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1998879268}
+    - targetCorrespondingSourceObject: {fileID: 9121915025561407470, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 661672190}
   m_SourcePrefab: {fileID: 100100000, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
 --- !u!4 &1151671467 stripped
 Transform:
@@ -32489,13 +32566,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5343551078837182812, guid: 893ccae3d4355b24d8254a79f475a178, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1188968261}
   m_SourcePrefab: {fileID: 100100000, guid: 893ccae3d4355b24d8254a79f475a178, type: 3}
 --- !u!4 &1188968259 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8967584666746360655, guid: 893ccae3d4355b24d8254a79f475a178, type: 3}
   m_PrefabInstance: {fileID: 1188968258}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1188968260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5343551078837182812, guid: 893ccae3d4355b24d8254a79f475a178, type: 3}
+  m_PrefabInstance: {fileID: 1188968258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1188968261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188968260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1bffa003aa8054f88f34d15145a995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SurfaceType
+  tipo: 1
 --- !u!1 &1192844337
 GameObject:
   m_ObjectHideFlags: 0
@@ -33146,6 +33244,9 @@ MonoBehaviour:
     m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   velocidadMaxima: 2.4
   suavizado: 6
+  sueloLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &1229942711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35121,7 +35222,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9121915025561407470, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
   m_PrefabInstance: {fileID: 1338143177}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1311555053
+--- !u!114 &1311555061
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -35130,9 +35231,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1311555045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e5731e9c6642404eaa2145ce8d46647, type: 3}
+  m_Script: {fileID: 11500000, guid: 25fa06f986f68cf4a8cfa44b5750af35, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DoorCreakFMOD
+  m_EditorClassIdentifier: Assembly-CSharp::DoorCreakOneShotsVR
+  creakThreshold: 15
+  cooldown: 0.25
 --- !u!1001 &1312150361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35605,7 +35708,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9121915025561407470, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1311555053}
+      addedObject: {fileID: 1311555061}
   m_SourcePrefab: {fileID: 100100000, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
 --- !u!4 &1338143178 stripped
 Transform:
@@ -37707,13 +37810,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 193035968745804120, guid: 730ae18839d94a44d91bc3fb2f03baf2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1432972574}
   m_SourcePrefab: {fileID: 100100000, guid: 730ae18839d94a44d91bc3fb2f03baf2, type: 3}
 --- !u!4 &1432972572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3816401459308749643, guid: 730ae18839d94a44d91bc3fb2f03baf2, type: 3}
   m_PrefabInstance: {fileID: 1432972571}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1432972573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 193035968745804120, guid: 730ae18839d94a44d91bc3fb2f03baf2, type: 3}
+  m_PrefabInstance: {fileID: 1432972571}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1432972574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432972573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1bffa003aa8054f88f34d15145a995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SurfaceType
+  tipo: 1
 --- !u!1001 &1436584909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48904,7 +49028,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9121915025561407470, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
   m_PrefabInstance: {fileID: 1865765004}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1745484457
+--- !u!114 &1745484465
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48913,28 +49037,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1745484456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: 25fa06f986f68cf4a8cfa44b5750af35, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  Event: 
-  EventPlayTrigger: 0
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
+  m_EditorClassIdentifier: Assembly-CSharp::DoorCreakOneShotsVR
+  creakThreshold: 15
+  cooldown: 0.25
 --- !u!1001 &1745990726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49448,6 +49555,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 4148c8684d5479f47b42a3a80837379d, type: 3}
   m_PrefabInstance: {fileID: 1141720832}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1763123024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141720833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1bffa003aa8054f88f34d15145a995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SurfaceType
+  tipo: 1
 --- !u!1 &1768128250
 GameObject:
   m_ObjectHideFlags: 0
@@ -55019,6 +55139,7 @@ GameObject:
   - component: {fileID: 1803063981}
   - component: {fileID: 1803063980}
   - component: {fileID: 1803063979}
+  - component: {fileID: 1803063983}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -55119,6 +55240,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1468700860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1803063983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803063978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1bffa003aa8054f88f34d15145a995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SurfaceType
+  tipo: 0
 --- !u!1 &1806294839
 GameObject:
   m_ObjectHideFlags: 0
@@ -55306,6 +55440,25 @@ Transform:
   - {fileID: 1234481099}
   m_Father: {fileID: 689413728}
   m_LocalEulerAnglesHint: {x: 0, y: -179.548, z: 0}
+--- !u!1 &1808315219 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9121915025561407470, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
+  m_PrefabInstance: {fileID: 1929059754}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1808315227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808315219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fa06f986f68cf4a8cfa44b5750af35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorCreakOneShotsVR
+  creakThreshold: 15
+  cooldown: 0.25
 --- !u!1001 &1813346647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56716,7 +56869,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9121915025561407470, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1854429956}
   m_SourcePrefab: {fileID: 100100000, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
 --- !u!4 &1854429947 stripped
 Transform:
@@ -56728,6 +56884,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9121915025561407470, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
   m_PrefabInstance: {fileID: 1854429946}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1854429956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854429948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fa06f986f68cf4a8cfa44b5750af35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorCreakOneShotsVR
+  creakThreshold: 15
+  cooldown: 0.25
 --- !u!1 &1861370684
 GameObject:
   m_ObjectHideFlags: 0
@@ -57059,7 +57229,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9121915025561407470, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1745484457}
+      addedObject: {fileID: 1745484465}
   m_SourcePrefab: {fileID: 100100000, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
 --- !u!4 &1865765005 stripped
 Transform:
@@ -57930,7 +58100,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9121915025561407470, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1808315227}
   m_SourcePrefab: {fileID: 100100000, guid: 7a36077af7cdf4f4b827a57e6c3d25d2, type: 3}
 --- !u!4 &1929059755 stripped
 Transform:

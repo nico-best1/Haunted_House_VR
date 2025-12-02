@@ -12,9 +12,15 @@ public class DynamicMoveSpeed : MonoBehaviour
     private FMOD.Studio.EventInstance footStepsSound;
     private bool footStepsStarted = false;
 
-    // --- NUEVO: suavizado del parámetro para que no se corte ---
+    // --- Suavizado de velocidad ---
     private float velocidadSuavizada = 0f;
-    public float suavizado = 6f;  // puedes ajustar → 4 suave | 8 más reactivo
+    public float suavizado = 6f;
+
+    // --- Nuevo: parámetro StepsType ---
+    private int currentStepsType = 0;   // 0 = wood (default), 1 = carpet
+
+    // LayerMask opcional para evitar raycast a otras cosas
+    public LayerMask sueloLayerMask = ~0;
 
     private void Start()
     {
@@ -28,10 +34,12 @@ public class DynamicMoveSpeed : MonoBehaviour
         Vector2 input = joystick.action.ReadValue<Vector2>();
         float intensidad = input.magnitude;
 
-        // Suaviza cambios de velocidad para evitar silencios
+        // Suaviza cambios de velocidad
         velocidadSuavizada = Mathf.Lerp(velocidadSuavizada, intensidad, suavizado * Time.deltaTime);
 
         moveProvider.moveSpeed = velocidadMaxima * velocidadSuavizada;
+
+        DetectarSuperficie();   // <-- NUEVO
 
         if (velocidadSuavizada > 0.05f)
         {
@@ -41,13 +49,30 @@ public class DynamicMoveSpeed : MonoBehaviour
                 footStepsStarted = true;
             }
 
-            // Parámetro mucho más estable → el loop ya no se rompe
+            // Parámetro de velocidad
             footStepsSound.setParameterByName("Velocidad", Mathf.Clamp01(velocidadSuavizada));
+
+            // Parámetro StepsType
+            footStepsSound.setParameterByName("StepsType", currentStepsType);
         }
         else
         {
             footStepsSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             footStepsStarted = false;
+        }
+    }
+
+    private void DetectarSuperficie()
+    {
+        Ray ray = new Ray(transform.position + Vector3.up * 0.1f, Vector3.down);
+
+        if (Physics.Raycast(ray, out RaycastHit hit, 2f, sueloLayerMask))
+        {
+            SurfaceType surface = hit.collider.GetComponent<SurfaceType>();
+            if (surface != null)
+            {
+                currentStepsType = (int)surface.tipo;
+            }
         }
     }
 

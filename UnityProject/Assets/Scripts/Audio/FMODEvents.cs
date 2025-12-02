@@ -3,6 +3,12 @@ using FMODUnity;
 
 public class FMODEvents : MonoBehaviour
 {
+    [field: Header("Breath")]
+    [field: SerializeField] public EventReference doorCreak { get; private set; }
+
+    [field: Header("Breath")]
+    [field: SerializeField] public EventReference breath { get; private set; }
+
     [field: Header("Wind")]
     [field: SerializeField] public EventReference wind { get; private set; }
 

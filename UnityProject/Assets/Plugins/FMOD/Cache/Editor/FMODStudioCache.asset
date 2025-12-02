@@ -269,10 +269,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638999457226017833
+  lastModified: 639002975958537697
   FileSizes:
   - Name: Desktop
-    Value: 864544
+    Value: 1124608
   Exists: 1
 --- !u!114 &-7000536078853393068
 MonoBehaviour:
@@ -316,7 +316,7 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638999482825202412
+  lastModified: 639002975956543408
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -612,6 +612,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 5950738681510445087}
+  - {fileID: 9009105620200538652}
   MinDistance: 1
   MaxDistance: 20
   Length: 1010
@@ -736,13 +737,15 @@ MonoBehaviour:
   - {fileID: 2091837460381278003}
   - {fileID: 1267052134341331728}
   - {fileID: 1041345080120361503}
+  - {fileID: 280586866389697275}
+  - {fileID: 5241281498049323684}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6951638383043566694}
   StringsBanks:
   - {fileID: 3793154789422150260}
   cacheVersion: 131856
-  cacheTime: 638999482825212381
+  cacheTime: 639002975958537697
   SerializableEventsDict:
   - key: event:/Ambience/Tension
     index: 0
@@ -786,6 +789,12 @@ MonoBehaviour:
     index: 19
   - key: event:/SFX/Effects/DrawerClose
     index: 20
+  - key: event:/Ambience/Wind
+    index: 21
+  - key: event:/SFX/Effects/Breath
+    index: 22
+  - key: event:/SFX/Effects/DoorCreak
+    index: 23
 --- !u!114 &170864418733350093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,6 +815,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1074
   Exists: 1
+--- !u!114 &280586866389697275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Effects/Breath
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Effects/Breath
+  Guid:
+    Data1: -1335984348
+    Data2: 1209694395
+    Data3: 24211391
+    Data4: 158770573
+  Banks:
+  - {fileID: -7123653212959068591}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 13800
 --- !u!114 &565750946105225073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -821,7 +857,7 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638999482825162507
+  lastModified: 639002950556523352
   FileSizes:
   - Name: Desktop
     Value: 20785280
@@ -1086,10 +1122,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638998691740251985
+  lastModified: 639002971369075641
   FileSizes:
   - Name: Desktop
-    Value: 4157056
+    Value: 4157312
   Exists: 1
 --- !u!114 &3236926638274837199
 MonoBehaviour:
@@ -1158,10 +1194,10 @@ MonoBehaviour:
   Path: ../FMODProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638999482825212381
+  lastModified: 639002975956543408
   FileSizes:
   - Name: Desktop
-    Value: 2486
+    Value: 2610
   Exists: 1
 --- !u!114 &3907778696474209899
 MonoBehaviour:
@@ -1309,6 +1345,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3000
+--- !u!114 &5241281498049323684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Effects/DoorCreak
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Effects/DoorCreak
+  Guid:
+    Data1: -59040096
+    Data2: 1216690913
+    Data3: -675019860
+    Data4: -650886493
+  Banks:
+  - {fileID: -7123653212959068591}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2400
 --- !u!114 &5255399834641838801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1638,6 +1701,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &9009105620200538652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerFootsteps/SetpsType
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: SetpsType
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 502211939
+    data2: 120415143
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &9087411450823779689
 MonoBehaviour:
   m_ObjectHideFlags: 0
