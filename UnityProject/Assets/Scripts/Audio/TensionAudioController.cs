@@ -7,7 +7,6 @@ public class TensionAudioController : MonoBehaviour
 {
     private EventInstance tension;
     public AmbienceController ambienceController;
-    public CreepySoundsController creepySoundsController;
     public CauldronSoundController cauldronSoundController;
     public EventInstance breathEvent;
     [Header("FMOD PARAMETER NAME")]
@@ -33,7 +32,6 @@ public class TensionAudioController : MonoBehaviour
             breathEvent = AudioManager.Instance.CreateInstance(FMODEvents.Instance.breath);
             breathEvent.start();
             ambienceController.FadeOut();
-            creepySoundsController.StopCreepySounds();
             cauldronSoundController.FadeOut();  
         }
     }

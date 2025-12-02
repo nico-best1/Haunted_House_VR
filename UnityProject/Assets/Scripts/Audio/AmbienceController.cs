@@ -9,6 +9,7 @@ public class AmbienceController : MonoBehaviour
 
     private EventInstance ambienceInstance;
     private bool isFading = false;
+    public Transform player; // referencia al jugador VR
 
     void Start()
     {
@@ -19,17 +20,33 @@ public class AmbienceController : MonoBehaviour
         ambienceInstance.setParameterByName("ambienceIntensity", 0f);
     }
 
-    // ------------ FADE IN (sube hasta 1 desde donde esté) ------------
-    public void FadeIn()
+    void Update()
     {
-        if (!isFading) StartCoroutine(FadeRoutine(1f, fadeInDuration));
+        // Actualiza la posición 3D del evento para que el centro del radio sea el jugador
+        if (ambienceInstance.isValid() && player != null)
+        {
+            ambienceInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(player.position));
+        }
     }
 
-    // ------------ FADE OUT (baja hasta 0 desde donde esté) ------------
+    public void FadeIn()
+    {
+        if (ambienceInstance.isValid())
+        {
+            ambienceInstance.setParameterByName("CreepySoundChance", 1f); // activarlos inmediatamente
+            if (!isFading) StartCoroutine(FadeRoutine(1f, fadeInDuration));
+        }
+    }
+
     public void FadeOut()
     {
-        if (!isFading) StartCoroutine(FadeRoutine(0f, fadeOutDuration));
+        if (ambienceInstance.isValid())
+        {
+            ambienceInstance.setParameterByName("CreepySoundChance", 0f); // desactivarlos inmediatamente
+            if (!isFading) StartCoroutine(FadeRoutine(0f, fadeOutDuration));
+        }
     }
+
 
     // ------------ CONTROL GENERAL DE FADE ------------
     private System.Collections.IEnumerator FadeRoutine(float target, float duration)

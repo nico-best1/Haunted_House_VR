@@ -545,6 +545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AmbienceController
   fadeInDuration: 3
   fadeOutDuration: 2
+  player: {fileID: 150705064}
 --- !u!1 &29909947
 GameObject:
   m_ObjectHideFlags: 0
@@ -29423,7 +29424,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TensionAudioController
   ambienceController: {fileID: 22179326}
-  creepySoundsController: {fileID: 1768128252}
   cauldronSoundController: {fileID: 317082797}
   parameterName: TensionIntensity
   fadeInDuration: 2
@@ -37078,7 +37078,6 @@ MonoBehaviour:
   minFlickerInterval: 0.05
   maxFlickerInterval: 0.2
   ambienceController: {fileID: 22179326}
-  creepySoundsController: {fileID: 1768128252}
   windController: {fileID: 259054277}
   fadeInDuration: 3
   previousEvent: {fileID: 1363467177}
@@ -49607,7 +49606,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768128250}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3fa8d4ac9567f4438c1af4f36b73b7c, type: 3}
   m_Name: 
@@ -49619,6 +49618,7 @@ MonoBehaviour:
   creepyParam: CreepySoundChance
   paramValue: 1
   player: {fileID: 150705064}
+  isActive: 0
 --- !u!1001 &1774434642
 PrefabInstance:
   m_ObjectHideFlags: 0

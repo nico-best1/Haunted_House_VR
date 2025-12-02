@@ -10,7 +10,6 @@ public class Event2 : MonoBehaviour
     public float maxFlickerInterval = 0.2f;
 
     public AmbienceController ambienceController;
-    public CreepySoundsController creepySoundsController;
     public WindAudioController windController;
     public float fadeInDuration = 3f;
 
@@ -42,7 +41,6 @@ public class Event2 : MonoBehaviour
     {
         AudioManager.Instance.PlayOneShot(FMODEvents.Instance.strongStringJumpscare);
 
-        creepySoundsController.StartCreepySounds();
         ambienceController.FadeIn();
         windController.FadeOut();
 
