@@ -5,7 +5,7 @@
 			<value>Breath</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{0b209e44-6ac3-47d0-9e9c-63e716a9378c}</destination>
@@ -135,6 +135,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{5404af1f-6be1-44c4-9636-7ac046ff94ff}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -168,7 +171,6 @@
 	<object class="MixerBusEffectChain" id="{43911420-ed36-4bfe-a5d0-e912a46d29b1}">
 		<relationship name="effects">
 			<destination>{690b9c10-cec2-462a-9941-ee67dffd55a7}</destination>
-			<destination>{4fa23d1f-01a2-412d-b99e-5a5d17739a2f}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{73975fb3-a577-4a58-b302-506ade12c466}" />
@@ -213,7 +215,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{690b9c10-cec2-462a-9941-ee67dffd55a7}" />
-	<object class="SpatialiserEffect" id="{4fa23d1f-01a2-412d-b99e-5a5d17739a2f}" />
 	<object class="AutomationPoint" id="{f049d8b9-3e96-4f03-a53a-2f99f7129b3c}">
 		<property name="position">
 			<value>0</value>
