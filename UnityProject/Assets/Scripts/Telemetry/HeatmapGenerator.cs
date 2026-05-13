@@ -18,6 +18,10 @@ public class HeatmapGenerator : MonoBehaviour
 {
     List<ZonaHeatmap> zonas;
 
+    public Gradient heatGradient;
+
+    public int maxValor = 10;
+
     public void InicializarZona(ZonaHeatmap zona)
     {
         //Guardamos la esquina inferior izquierda
@@ -35,7 +39,7 @@ public class HeatmapGenerator : MonoBehaviour
         // Creamos la matriz vacía con ese tamaño
         zona.tensionMap = new int[columnas, filas];
     }
-    public void RegistrarEventoEnZona(ZonaHeatmap zona, Vector3 posicionEvento)
+    public void RegistrarEventoEnZona(ZonaHeatmap zona, Vector3 posicionEvento, string typeEvent)
     {
         //Calculamos la distancia desde el inicio de nuestra cuadrícula (minX, minZ) hasta el evento
         float distanciaX = posicionEvento.x - zona.minX;
@@ -54,9 +58,10 @@ public class HeatmapGenerator : MonoBehaviour
         fila = Mathf.Clamp(fila, 0, maxFila);
 
         // Sumamos 1 a la intensidad de esa cuadrícula
-        zona.tensionMap[columna, fila] += 1;
+        if (typeEvent == "tension") zona.tensionMap[columna, fila] += 1;
+        else if (typeEvent == "atencion") zona.attentionMap[columna, fila] += 1;
 
-        Debug.Log($"Evento registrado en {zona.nombreZona} -> Celda [{columna}, {fila}]");
+            Debug.Log($"Evento registrado en {zona.nombreZona} -> Celda [{columna}, {fila}]");
     }
     public void RegistrarEvento()
     {
@@ -66,16 +71,48 @@ public class HeatmapGenerator : MonoBehaviour
         {
             if (zona.boundsCollider.bounds.Contains(posicionEvento))
             {
-                // ¡Bingo! El evento ocurrió en esta habitación.
-                // Ahora conviertes la posición X,Z a la cuadrícula local de esta zona
-                // y le sumas +1 de intensidad.
-                RegistrarEventoEnZona(zona, posicionEvento);
+                // Posición X,Z a la cuadrícula local de esta zona y +1 de intensidad.
+                RegistrarEventoEnZona(zona, posicionEvento, "tension");
                 break; // Pasamos al siguiente evento
             }
         }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public Texture2D generarTexturaHeatmap(ZonaHeatmap zona)
+    {
+        int columnas = zona.tensionMap.GetLength(0);
+        int filas = zona.tensionMap.GetLength(1);
+
+        Texture2D textura = new Texture2D(columnas, filas, TextureFormat.RGBA32, false);
+        textura.filterMode = FilterMode.Bilinear;
+
+        Color[] pixeles = new Color[columnas * filas];
+
+        for (int y = 0; y < filas; y++)
+        {
+            for (int x = 0; x < columnas; x++)
+            {
+                int valor = zona.tensionMap[x, y];
+
+                // Normalizar el valor a un rango de 0.0 a 1.0
+                float normalizado = (float)valor / maxValor;
+                normalizado = Mathf.Clamp01(normalizado); // Asegurar que no supere 1.0
+
+                // Obtener el color correspondiente de nuestro Gradiente
+                Color colorPixel = heatGradient.Evaluate(normalizado);
+
+                // Asignar el color al array de píxeles
+                int indiceArray = y * columnas + x;
+                pixeles[indiceArray] = colorPixel;
+            }
+        }
+
+        textura.SetPixels(pixeles);
+        textura.Apply();
+
+        return textura;
+    }
+        // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         zonas = new List<ZonaHeatmap>();
