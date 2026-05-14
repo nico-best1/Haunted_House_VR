@@ -23,7 +23,7 @@ public class TelemetryManager : MonoBehaviour
 
     private Thread workerThread;
 
-    private bool running;
+    private volatile bool running;
 
     private string filePath;
 
@@ -61,14 +61,23 @@ public class TelemetryManager : MonoBehaviour
         Debug.Log($"Telemetry file: {filePath}");
     }
 
-    public void Track(string eventName, Vector3 position, string payload = "")
-    {
-        var telemetryEvent = new TelemetryEvent
-        {
-            eventName = eventName,
-            time = Time.time
-        };
+    public string SessionId => sessionId;
 
+    private string sessionId;
+
+    private float sessionStartTime;
+
+    private void Start()
+    {
+        sessionId = Guid.NewGuid().ToString();
+
+        sessionStartTime = Time.time;
+
+        Track(new SessionStartEvent(sessionId));
+    }
+
+    public void Track(TelemetryEvent telemetryEvent)
+    {
         queue.Enqueue(telemetryEvent);
     }
     private void WorkerLoop()
@@ -96,13 +105,15 @@ public class TelemetryManager : MonoBehaviour
             }
             catch (Exception e)
             {
-                Debug.LogError($"Telemetry Thread Error: {e}");
+                File.AppendAllText(
+                    filePath + ".errors.txt",
+                    e.ToString()
+                );
             }
         }
 
         FlushRemaining();
     }
-
 
     private void WriteBatch(List<TelemetryEvent> events)
     {
@@ -110,7 +121,9 @@ public class TelemetryManager : MonoBehaviour
 
         for (int i = 0; i < events.Count; i++)
         {
-            string json = JsonUtility.ToJson(events[i]);
+            string json = JsonUtility.ToJson(
+                (object)events[i]
+            );
 
             builder.AppendLine(json);
         }
@@ -146,6 +159,10 @@ public class TelemetryManager : MonoBehaviour
     {
         if (!running)
             return;
+
+        float duration = Time.time - sessionStartTime;
+
+        Track(new SessionEndEvent(sessionId, duration));
 
         running = false;
 

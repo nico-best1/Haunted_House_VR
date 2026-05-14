@@ -1,10 +1,12 @@
 using System;
-using UnityEngine;
 
 [Serializable]
-public struct TelemetryEvent
+public abstract class TelemetryEvent
 {
-    public string eventName;
-    public float time;
+    public string eventType;
 
+    public string session_id;
+
+    // timestamp en milisegundos
+    public long timestamp;
 }
