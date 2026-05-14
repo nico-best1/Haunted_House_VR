@@ -16,7 +16,7 @@ public class ZonaHeatmap
 
 public class HeatmapGenerator : MonoBehaviour
 {
-    List<ZonaHeatmap> zonas;
+    public List<ZonaHeatmap> zonas;
 
     public Gradient heatGradient;
 

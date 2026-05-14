@@ -28541,6 +28541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 969613810}
+  - component: {fileID: 969613811}
   m_Layer: 0
   m_Name: Pasillo3
   m_TagString: Untagged
@@ -28567,6 +28568,27 @@ Transform:
   - {fileID: 644146840}
   m_Father: {fileID: 1468700860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &969613811
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969613809}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.4186401, y: 3.930482, z: 32.862278}
+  m_Center: {x: 23.363373, y: 5.4896955, z: -1.4471755}
 --- !u!1 &976461090
 GameObject:
   m_ObjectHideFlags: 0
@@ -36919,6 +36941,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1379975141}
+  - component: {fileID: 1379975142}
   m_Layer: 0
   m_Name: Room1
   m_TagString: Untagged
@@ -36945,6 +36968,27 @@ Transform:
   - {fileID: 1727138911}
   m_Father: {fileID: 1468700860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1379975142
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379975140}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 11.739651, y: 4.0231104, z: 14.495087}
+  m_Center: {x: 14.27623, y: 10.901701, z: 17.030743}
 --- !u!1001 &1381272014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42811,6 +42855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1634606911}
   - component: {fileID: 1634606912}
+  - component: {fileID: 1634606913}
   m_Layer: 0
   m_Name: TelemetryManager
   m_TagString: Untagged
@@ -42847,6 +42892,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TelemetryManager
   batchSize: 32
   flushIntervalMs: 500
+--- !u!114 &1634606913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634606910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ebc840e65ddeb84d944741d0775a55c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeatmapGenerator
+  zonas:
+  - nombreZona: 
+    boundsCollider: {fileID: 0}
+    "tama\xF1oCelda": 0
+    minX: 0
+    minZ: 0
+  heatGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 0, b: 0, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  maxValor: 10
 --- !u!1001 &1636374383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49400,6 +49494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1756659784}
+  - component: {fileID: 1756659785}
   m_Layer: 0
   m_Name: Pasillo1
   m_TagString: Untagged
@@ -49427,6 +49522,27 @@ Transform:
   - {fileID: 259054275}
   m_Father: {fileID: 1468700860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1756659785
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756659783}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 22.664026, y: 3.6943018, z: 3.7423325}
+  m_Center: {x: 10.556338, y: 1.1601974, z: 1.8386717}
 --- !u!1 &1756979225 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4560022022688705476, guid: bcfeadf4c95c39347a7067928e469373, type: 3}
@@ -56967,6 +57083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1852219160}
+  - component: {fileID: 1852219161}
   m_Layer: 0
   m_Name: Room2
   m_TagString: Untagged
@@ -56993,6 +57110,27 @@ Transform:
   - {fileID: 417847936}
   m_Father: {fileID: 1468700860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1852219161
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852219159}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 11.831736, y: 3.6860924, z: 13.795098}
+  m_Center: {x: 14.944367, y: 10.82407, z: 2.7011485}
 --- !u!1001 &1854429946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58712,6 +58850,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948864324}
+  - component: {fileID: 1948864325}
   m_Layer: 0
   m_Name: Room3
   m_TagString: Untagged
@@ -58737,6 +58876,27 @@ Transform:
   - {fileID: 367917429}
   m_Father: {fileID: 1468700860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1948864325
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948864323}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 11.574505, y: 3.9742756, z: 10.877861}
+  m_Center: {x: 27.440401, y: 5.3266706, z: -14.178043}
 --- !u!1 &1964473701
 GameObject:
   m_ObjectHideFlags: 0
@@ -59422,6 +59582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1989347604}
+  - component: {fileID: 1989347605}
   m_Layer: 0
   m_Name: Room0
   m_TagString: Untagged
@@ -59447,6 +59608,27 @@ Transform:
   - {fileID: 1192844338}
   m_Father: {fileID: 1468700860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1989347605
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989347603}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 11.548859, y: 4.283519, z: 10.826244}
+  m_Center: {x: 31.858238, y: 5.502661, z: 22.800718}
 --- !u!1001 &1991942485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62266,6 +62448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2109439737}
+  - component: {fileID: 2109439738}
   m_Layer: 0
   m_Name: Pasillo2
   m_TagString: Untagged
@@ -62291,6 +62474,27 @@ Transform:
   - {fileID: 918089869}
   m_Father: {fileID: 1468700860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2109439738
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109439736}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.5666027, y: 3.8462763, z: 34.224957}
+  m_Center: {x: 6.6629534, y: 4.7365174, z: 2.980929}
 --- !u!1001 &2110053601
 PrefabInstance:
   m_ObjectHideFlags: 0
