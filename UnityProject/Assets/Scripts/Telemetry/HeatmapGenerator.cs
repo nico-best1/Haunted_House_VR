@@ -1,5 +1,9 @@
-using UnityEngine;
 using System.Collections.Generic;
+using System.IO;
+using Unity.VisualScripting;
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class ZonaHeatmap
@@ -9,6 +13,8 @@ public class ZonaHeatmap
     public int[,] tensionMap;          // Cuadrícula de esta zona concreta
     public int[,] attentionMap;          // Cuadrícula de esta zona concreta
     public float tamañoCelda = 0.5f;   // Resolución (ej. 50cm por celda)
+
+    public Texture2D fondo;
 
     [HideInInspector] public float minX;
     [HideInInspector] public float minZ;
@@ -61,11 +67,11 @@ public class HeatmapGenerator : MonoBehaviour
         if (typeEvent == "tension") zona.tensionMap[columna, fila] += 1;
         else if (typeEvent == "atencion") zona.attentionMap[columna, fila] += 1;
 
-            Debug.Log($"Evento registrado en {zona.nombreZona} -> Celda [{columna}, {fila}]");
+        Debug.Log($"Evento registrado en {zona.nombreZona} -> Celda [{columna}, {fila}]");
     }
     public void RegistrarEvento()
     {
-        Vector3 posicionEvento = new Vector3();
+        Vector3 posicionEvento = new Vector3(13.359f, 4.991f, 7.312f);//Probando con un punto determinado
 
         foreach (ZonaHeatmap zona in zonas)
         {
@@ -112,12 +118,89 @@ public class HeatmapGenerator : MonoBehaviour
 
         return textura;
     }
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        zonas = new List<ZonaHeatmap>();
-    }
 
+    public void exportarHeatmap()
+    {
+        string carpetaPath = Path.Combine(Application.dataPath, "Imagenes/heatmaps");
+
+        if (!Directory.Exists(carpetaPath))
+        {
+            Directory.CreateDirectory(carpetaPath);
+        }
+
+        foreach (ZonaHeatmap zona in zonas)
+        {
+            // Usamos la función que creaste antes para generar la textura
+            Texture2D texturaHeatmap = generarTexturaHeatmap(zona);
+            Texture2D texturaFondo = zona.fondo;
+
+            if (texturaHeatmap != null && texturaFondo != null)
+            {
+                Texture2D texturaFinal = new Texture2D(texturaFondo.width, texturaFondo.height, TextureFormat.RGBA32, false);
+
+                for (int x = 0; x < texturaFondo.width; x++)
+                {
+                    for (int y = 0; y < texturaFondo.height; y++)
+                    {
+                        // píxel del fondo original
+                        Color colorFondo = texturaFondo.GetPixel(x, y);
+
+                        // coordenadas normalizadas (de 0.0 a 1.0) 
+                        // para saber qué parte del heatmap corresponde a este píxel del fondo
+                        float u = (float)x / texturaFondo.width;
+                        float v = (float)y / texturaFondo.height;
+
+                        // color del heatmap
+                        Color colorHeatmap = texturaHeatmap.GetPixelBilinear(u, v);
+
+                        // Mezclamos los dos colores
+                        Color colorMezclado = Color.Lerp(colorFondo, colorHeatmap, colorHeatmap.a);
+
+                        // Pintamos el píxel en la textura final
+                        texturaFinal.SetPixel(x, y, colorMezclado);
+                    }
+                }
+                // Aplicamos los cambios
+                texturaFinal.Apply();
+                byte[] bytesPNG = texturaFinal.EncodeToPNG();
+
+                string nombreLimpio = zona.nombreZona.Replace(" ", "_");
+                string nombreArchivo = $"Heatmap_{nombreLimpio}.png";
+
+                string rutaCompleta = Path.Combine(carpetaPath, nombreArchivo);
+
+                File.WriteAllBytes(rutaCompleta, bytesPNG);
+
+                Debug.Log($"Heatmap guardado correctamente en: {rutaCompleta}");
+            }
+        }
+
+#if UNITY_EDITOR
+        UnityEditor.AssetDatabase.Refresh();
+#endif
+    }
+    private void Start()
+    {
+        foreach (ZonaHeatmap zona in zonas)
+            InicializarZona(zona);
+
+        //RegistrarEvento();
+        //RegistrarEvento();
+        //RegistrarEvento();
+        //RegistrarEvento();
+        //RegistrarEvento();
+        //RegistrarEvento();
+        //RegistrarEvento();
+        //RegistrarEvento();
+        //RegistrarEvento();
+        //RegistrarEvento();
+        //RegistrarEvento();
+        //RegistrarEvento();
+        //RegistrarEvento();
+        //RegistrarEvento();
+        //RegistrarEvento();
+        exportarHeatmap();
+    }
     // Update is called once per frame
     void Update()
     {
