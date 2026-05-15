@@ -1,21 +1,29 @@
 using Unity.Mathematics;
 using UnityEngine;
 
-public struct positionEvent
+public struct PositionEvent
 {
-    int x;
-    int y;
-    int z;
+    float x;
+    float y;
+    float z;
+
+    // Constructor opcional para facilitar la creación
+    public PositionEvent(float x, float y, float z)
+    {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
 }
 
 public class ProgresionEvent : TrackerEvent
 {
-    public positionEvent position;
+    public PositionEvent position;
 
-    public ProgresionEvent(string eventType, int timeStamp, positionEvent p) : base(eventType, timeStamp) { this.position = p; }
+    public ProgresionEvent(string eventType, int timeStamp, PositionEvent p) : base(eventType, timeStamp) { this.position = p; }
 
-    public void setPosition(positionEvent p) {  position = p; }
-    public positionEvent getPosition() { return position; }
+    public void setPosition(PositionEvent p) {  position = p; }
+    public PositionEvent getPosition() { return position; }
 
     public override string ToJSON() { return JsonUtility.ToJson(this); }
 }
