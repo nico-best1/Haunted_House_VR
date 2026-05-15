@@ -42857,6 +42857,7 @@ GameObject:
   - component: {fileID: 1634606912}
   - component: {fileID: 1634606913}
   - component: {fileID: 1634606914}
+  - component: {fileID: 1634606915}
   m_Layer: 0
   m_Name: TelemetryManager
   m_TagString: Untagged
@@ -42886,7 +42887,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634606910}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6449923ea0c39204289550a95a2b96a7, type: 3}
   m_Name: 
@@ -42900,7 +42901,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634606910}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ebc840e65ddeb84d944741d0775a55c, type: 3}
   m_Name: 
@@ -42950,7 +42951,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634606910}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 293c0e88790a72d48b1b6541e88bbdcb, type: 3}
   m_Name: 
@@ -42961,6 +42962,26 @@ MonoBehaviour:
   raycastLayers:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1634606915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634606910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 108a6c0fa207b9449a1ddd9dea076957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrackerManager
+  flushTimeSecond: 5
+  filePersistence: 1
+  format: 0
+  controllerTrigger: 15
+  headTrigger: 4
+  head: {fileID: 941035299}
+  controllerRight: {fileID: 2075615804}
+  controllerLeft: {fileID: 950222600}
 --- !u!1001 &1636374383
 PrefabInstance:
   m_ObjectHideFlags: 0
