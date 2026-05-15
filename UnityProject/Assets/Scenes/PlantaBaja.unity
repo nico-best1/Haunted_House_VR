@@ -3672,6 +3672,73 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4250699653606014965, guid: f372f233854120e46bc84f17e569f913, type: 3}
   m_PrefabInstance: {fileID: 795464863}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &169076658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 169076659}
+  - component: {fileID: 169076661}
+  - component: {fileID: 169076660}
+  m_Layer: 3
+  m_Name: PasilloTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &169076659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169076658}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.81, y: -0.2757635, z: 1.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1756659784}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &169076660
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169076658}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 15.122805, y: 4.0257716, z: 3.7301998}
+  m_Center: {x: 1.0818987, y: 1.5128856, z: -0.015536308}
+--- !u!114 &169076661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169076658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f043ff3e98c7fd8428fcdaadfdb6bf5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomSensor
+  roomName: Pasillo1
 --- !u!1001 &171847539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28708,6 +28775,7 @@ Transform:
   - {fileID: 1394473865}
   - {fileID: 1078140079}
   - {fileID: 644146840}
+  - {fileID: 1293862548}
   m_Father: {fileID: 1468700860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &969613811
@@ -30413,6 +30481,95 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4257033769347998369, guid: 0a34a63b00dfb7e428040dfa0e8bda8d, type: 3}
   m_PrefabInstance: {fileID: 1055466403}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1055668477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1055668478}
+  - component: {fileID: 1055668481}
+  - component: {fileID: 1055668480}
+  - component: {fileID: 1055668479}
+  m_Layer: 3
+  m_Name: PasilloTrigger (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1055668478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055668477}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.63, y: 3.181992, z: 7.0299363}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2109439737}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1055668479
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055668477}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.5297337, y: 4.1096, z: 34.15399}
+  m_Center: {x: 0.071520805, y: 1.5548003, z: -4.019474}
+--- !u!65 &1055668480
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055668477}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.627584, y: 4.0257716, z: 3.7301998}
+  m_Center: {x: -3.4758787, y: 1.5128856, z: -0.015536308}
+--- !u!114 &1055668481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055668477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f043ff3e98c7fd8428fcdaadfdb6bf5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomSensor
+  roomName: Pasillo2
 --- !u!1 &1061910289
 GameObject:
   m_ObjectHideFlags: 0
@@ -34689,6 +34846,73 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4149506485688938, guid: 53a5ca55612b2104c812770a7799f03c, type: 3}
   m_PrefabInstance: {fileID: 1291808436}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1293862547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1293862548}
+  - component: {fileID: 1293862550}
+  - component: {fileID: 1293862549}
+  m_Layer: 3
+  m_Name: PasilloTrigger2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1293862548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293862547}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 23.52, y: 4.13, z: 1.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 969613810}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1293862549
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293862547}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.3493652, y: 4.0257716, z: 32.893234}
+  m_Center: {x: 0.0012893677, y: 1.5128856, z: -3.291576}
+--- !u!114 &1293862550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293862547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f043ff3e98c7fd8428fcdaadfdb6bf5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomSensor
+  roomName: Pasillo3
 --- !u!1 &1298708592
 GameObject:
   m_ObjectHideFlags: 0
@@ -43197,6 +43421,9 @@ MonoBehaviour:
   - {fileID: 803855286}
   - {fileID: 2100029814}
   - {fileID: 1334741544}
+  - {fileID: 169076661}
+  - {fileID: 1055668481}
+  - {fileID: 1293862550}
 --- !u!1001 &1636374383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49776,6 +50003,7 @@ Transform:
   - {fileID: 1515176540}
   - {fileID: 1449086305}
   - {fileID: 259054275}
+  - {fileID: 169076659}
   m_Father: {fileID: 1468700860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1756659785
@@ -49797,8 +50025,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 22.664026, y: 3.6943018, z: 3.7423325}
-  m_Center: {x: 10.556338, y: 1.1601974, z: 1.8386717}
+  m_Size: {x: 15.206504, y: 3.6943018, z: 3.7423325}
+  m_Center: {x: 6.827575, y: 1.1601974, z: 1.8386717}
 --- !u!1 &1756979225 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4560022022688705476, guid: bcfeadf4c95c39347a7067928e469373, type: 3}
@@ -62798,6 +63026,7 @@ Transform:
   - {fileID: 1063272809}
   - {fileID: 134685787}
   - {fileID: 918089869}
+  - {fileID: 1055668478}
   m_Father: {fileID: 1468700860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2109439738

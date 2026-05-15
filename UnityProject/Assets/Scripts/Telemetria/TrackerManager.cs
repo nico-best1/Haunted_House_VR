@@ -127,7 +127,7 @@ public class TrackerManager : MonoBehaviour
 
     public void OnRoomEnter(string roomName)
     {
-        if (roomName == currentRoom) return;
+        if (roomName.Equals(currentRoom)) return;
 
         tracker.TrackEvent(new TrackerEvent("Enter_" + roomName, (int)(Time.time * 1000f)));
         currentRoom = roomName;
