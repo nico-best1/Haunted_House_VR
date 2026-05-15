@@ -1,11 +1,12 @@
 using Unity.Mathematics;
 using UnityEngine;
 
+[System.Serializable]
 public struct PositionEvent
 {
-    float x;
-    float y;
-    float z;
+    public float x;
+    public float y;
+    public float z;
 
     // Constructor opcional para facilitar la creación
     public PositionEvent(float x, float y, float z)

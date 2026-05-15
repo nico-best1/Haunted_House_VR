@@ -27,7 +27,7 @@ public class TrackerManager : MonoBehaviour
     Transform head;
 
     Quaternion lastRotation;
-    public Vector3 angularVelocity;
+    Vector3 angularVelocity;
 
     [SerializeField]
     Transform controllerRight;
@@ -52,7 +52,7 @@ public class TrackerManager : MonoBehaviour
             string sessionId = System.Guid.NewGuid().ToString();
 
             // se inicializa el tracker
-            string error = Tracker.Init(sessionId, (int)Time.time, path, filePersistence, format);
+            string error = Tracker.Init(sessionId, (int)Time.time*1000, path, filePersistence, format);
 
             // si hay error, se muestra por consola
             if (error != null)
@@ -67,7 +67,7 @@ public class TrackerManager : MonoBehaviour
         controllerRightLastPosition = controllerRight.position;
     }
 
-    private void Update()
+    void Update()
     {
         //Flush cada cierto tiempo
         deltaTime += Time.deltaTime;
@@ -80,16 +80,17 @@ public class TrackerManager : MonoBehaviour
 
         //Comprobacion del movimiento brusco en mandos
         controllerLeftVelocity = (controllerLeft.position - controllerLeftLastPosition) / Time.deltaTime;
-        controllerLeftLastPosition = controllerLeft.position;
 
         controllerRightVelocity = (controllerRight.position - controllerRightLastPosition) / Time.deltaTime;
-        controllerRightLastPosition = controllerRight.position;
 
         if (controllerLeftVelocity.magnitude > controllerTrigger || controllerRightVelocity.magnitude > controllerTrigger)
         {
             PositionEvent p = new PositionEvent(head.position.x, head.position.y, head.position.z);
             tracker.TrackEvent(new ProgresionEvent("Quick_Jitter_Move", (int)(Time.time * 1000f), p));
         }
+
+        controllerLeftLastPosition = controllerLeft.position;
+        controllerRightLastPosition = controllerRight.position;
 
         //Comprobacion del movimiento bruco en cabeza
         Quaternion delta = head.rotation * Quaternion.Inverse(lastRotation);
@@ -101,13 +102,13 @@ public class TrackerManager : MonoBehaviour
 
         angularVelocity = axis * angle * Mathf.Deg2Rad / Time.deltaTime;
 
-        lastRotation = head.rotation;
 
         if(angularVelocity.magnitude > headTrigger)
         {
             PositionEvent p = new PositionEvent(head.position.x, head.position.y, head.position.z);
             tracker.TrackEvent(new ProgresionEvent("Quick_HMD_Move", (int)(Time.time * 1000f), p));
         }
+        lastRotation = head.rotation;
 
     }
 
@@ -115,7 +116,7 @@ public class TrackerManager : MonoBehaviour
     void OnApplicationQuit()
     {
         // se finaliza la sesion del tracker
-        Tracker.End((int)Time.time);
+        Tracker.End((int)Time.time*1000);
 
         tracker = null;
     }

@@ -42977,8 +42977,8 @@ MonoBehaviour:
   flushTimeSecond: 5
   filePersistence: 1
   format: 0
-  controllerTrigger: 15
-  headTrigger: 4
+  controllerTrigger: 30
+  headTrigger: 50
   head: {fileID: 941035299}
   controllerRight: {fileID: 2075615804}
   controllerLeft: {fileID: 950222600}
