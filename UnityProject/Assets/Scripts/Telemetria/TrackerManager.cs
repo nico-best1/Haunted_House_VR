@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Analytics;
 
 // clase que gestiona el tracker dentro de unity
 public class TrackerManager : MonoBehaviour
@@ -35,6 +36,11 @@ public class TrackerManager : MonoBehaviour
     [SerializeField]
     Transform controllerLeft;
 
+    [SerializeField]
+    RoomSensor[] rooms;
+
+    string currentRoom;
+
     Vector3 controllerLeftLastPosition;
     Vector3 controllerLeftVelocity;
     Vector3 controllerRightLastPosition;
@@ -65,6 +71,13 @@ public class TrackerManager : MonoBehaviour
         lastRotation = head.rotation;
         controllerLeftLastPosition = controllerLeft.position;
         controllerRightLastPosition = controllerRight.position;
+
+        foreach (RoomSensor room in rooms)
+        {
+            room.Init(this);
+        }
+
+        currentRoom = "";
     }
 
     void Update()
@@ -110,6 +123,14 @@ public class TrackerManager : MonoBehaviour
         }
         lastRotation = head.rotation;
 
+    }
+
+    public void OnRoomEnter(string roomName)
+    {
+        if (roomName == currentRoom) return;
+
+        tracker.TrackEvent(new TrackerEvent("Enter_" + roomName, (int)(Time.time * 1000f)));
+        currentRoom = roomName;
     }
 
     // metodo que se ejecuta al cerrar la aplicacion
