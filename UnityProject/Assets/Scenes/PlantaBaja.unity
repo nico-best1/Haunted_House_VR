@@ -43372,7 +43372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrackerManager
   flushTimeSecond: 5
   filePersistence: 1
-  format: 0
+  format: 1
   controllerTrigger: 30
   headTrigger: 50
   head: {fileID: 941035299}
