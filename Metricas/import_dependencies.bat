@@ -10,7 +10,7 @@ echo Actualizando pip...
 python -m pip install --upgrade pip
 
 echo Instalando dependencias...
-pip install matplotlib pandas 
+pip install matplotlib pandas numpy seaborn pillow
 
 echo.
 echo Entorno listo. Para activarlo en el futuro usa:

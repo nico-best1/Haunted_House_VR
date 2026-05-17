@@ -145,6 +145,9 @@ desktop.ini
 # VS Code
 .vscode/
 
+# Entorno virtual 
+Metricas/venv/
+
 # Misc
 *.swp
 *.swo
