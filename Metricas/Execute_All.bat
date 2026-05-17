@@ -9,7 +9,7 @@ echo.
 echo Ejecucion stress_metrics finalizada.
 
 echo Ejecutando script spatial_heatmap.py...
-python src\spatial_heatmap.py
+python src\spatial_heatmaps.py
 echo.
 echo Ejecucion spatial_heatmap finalizada.
 

@@ -5,7 +5,7 @@ call venv\Scripts\activate
 
 echo Ejecutando script...
 
-python src\spatial_heatmap.py
+python src\spatial_heatmaps.py
 
 echo.
 echo Ejecucion finalizada.
