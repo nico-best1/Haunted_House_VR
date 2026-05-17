@@ -5,6 +5,12 @@ Explore a mysterious abandoned mansion packed with secrets, scares, and an eerie
 
 ---
 
+## Demo Video
+
+[![Haunted House VR – Demo](https://img.youtube.com/vi/dfJRu-ihpig/maxresdefault.jpg)](https://youtu.be/dfJRu-ihpig)
+
+---
+
 ## Main Features
 
 - Fully immersive **virtual reality** experience  
