@@ -184,7 +184,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Genera mapas de calor de tensión espacial agregando todas las sesiones.")
     parser.add_argument("--csv-dir", default="metricas_test", help="Directorio con los archivos telemetry_*.csv")
     parser.add_argument("--map-dir", default="mapas", help="Directorio con las imágenes de fondo")
-    parser.add_argument("--out-dir", default="graficos", help="Directorio de salida para los heatmaps")
+    parser.add_argument("--out-dir", default="graphics", help="Directorio de salida para los heatmaps")
     args = parser.parse_args()
 
     df_global = process_all_sessions(args.csv_dir)

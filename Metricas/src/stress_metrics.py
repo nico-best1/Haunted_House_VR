@@ -51,7 +51,7 @@ ENTER_PREFIX  = "Enter_"
 DEFAULT_SAFE_ROOM   = "Room0"   # nombre de la sala de referencia 
 DEFAULT_CSV         = "sesion.csv"
 DEFAULT_OUTPUT      = "stress_report.png"
-OUTPUT_DIR = "graficos"
+OUTPUT_DIR = "graphics"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Carga y limpieza del CSV

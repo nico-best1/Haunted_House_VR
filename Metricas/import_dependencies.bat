@@ -10,7 +10,9 @@ echo Actualizando pip...
 python -m pip install --upgrade pip
 
 echo Instalando dependencias...
-pip install matplotlib pandas numpy seaborn pillow
+pip install matplotlib pandas numpy seaborn pillow nbconvert ipykernel
+
+python -m ipykernel install --user --name venv --display-name "Python (venv)"
 
 echo.
 echo Entorno listo. Para activarlo en el futuro usa:

@@ -5,7 +5,7 @@ call venv\Scripts\activate
 
 echo Ejecutando script...
 
-python src\spatial_heatmaps.py
+python -m nbconvert --to notebook --execute src\stress_analysis.ipynb --inplace
 
 echo.
 echo Ejecucion finalizada.
