@@ -1,3 +1,4 @@
+using System;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -27,4 +28,5 @@ public class ProgresionEvent : TrackerEvent
     public PositionEvent getPosition() { return position; }
 
     public override string ToJSON() { return JsonUtility.ToJson(this); }
+    public override string ToCSV() { return FormattableString.Invariant($"{eventType},{sessionId},{eventId},{timeStamp}, {position.x}, {position.y}, {position.z}"); }
 }

@@ -43289,7 +43289,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1634606911}
   - component: {fileID: 1634606912}
-  - component: {fileID: 1634606913}
   - component: {fileID: 1634606914}
   - component: {fileID: 1634606915}
   m_Layer: 0
@@ -43328,18 +43327,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TelemetryManager
   batchSize: 32
   flushIntervalMs: 500
---- !u!114 &1634606913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634606910}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ebc840e65ddeb84d944741d0775a55c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HeatmapGenerator
 --- !u!114 &1634606914
 MonoBehaviour:
   m_ObjectHideFlags: 0
