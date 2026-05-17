@@ -3,11 +3,6 @@ echo Activando entorno virtual...
 
 call venv\Scripts\activate
 
-echo Ejecutando script stress_metrics...
-python src\stress_metrics.py
-echo.
-echo Ejecucion stress_metrics finalizada.
-
 echo Ejecutando script spatial_heatmap...
 python src\spatial_heatmaps.py
 echo.
