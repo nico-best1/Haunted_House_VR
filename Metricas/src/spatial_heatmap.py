@@ -12,6 +12,7 @@ Dependencias:
 """
 
 import argparse
+import os
 from pathlib import Path
 import pandas as pd
 import numpy as np
@@ -147,5 +148,10 @@ if __name__ == "__main__":
         exit(1)
         
     df = assign_rooms(df)
-    
-    plot_spatial_analysis(df, args.room, args.map_image, args.output)
+
+    os.makedirs("graficos", exist_ok=True)
+
+    map_name = os.path.splitext(os.path.basename(args.map_image))[0]
+    output_file = f"graficos/spatial_heatmap_{map_name}.png"
+
+    plot_spatial_analysis(df, args.room, args.map_image, output_file)
