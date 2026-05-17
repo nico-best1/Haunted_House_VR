@@ -51,6 +51,7 @@ ENTER_PREFIX  = "Enter_"
 DEFAULT_SAFE_ROOM   = "Room0"   # nombre de la sala de referencia 
 DEFAULT_CSV         = "sesion.csv"
 DEFAULT_OUTPUT      = "stress_report.png"
+OUTPUT_DIR = "graficos"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Carga y limpieza del CSV
@@ -396,27 +397,30 @@ def generate_sample_csv(path: str = "sample_session.csv"):
 # ─────────────────────────────────────────────────────────────────────────────
 
 def main():
+
+    Path(OUTPUT_DIR).mkdir(exist_ok=True)
+
     parser = argparse.ArgumentParser(
         description="Calcula métricas de estrés M1/M2 por sala desde el CSV del TrackerManager."
     )
-    parser.add_argument("--csv",       default=DEFAULT_CSV,       help="Ruta al CSV de sesión")
+    parser.add_argument("--csv", default=DEFAULT_CSV, help="Ruta al CSV de sesión")
     parser.add_argument("--safe-room", default=DEFAULT_SAFE_ROOM, help="Nombre de la sala segura (sin 'Enter_')")
-    parser.add_argument("--output",    default=DEFAULT_OUTPUT,    help="Ruta de la imagen de salida (.png)")
-    parser.add_argument("--sample",    action="store_true",       help="Genera y usa un CSV de ejemplo")
+    parser.add_argument("--output", default=DEFAULT_OUTPUT, help="Ruta de la imagen de salida (.png)")
+    parser.add_argument("--sample", action="store_true", help="Genera y usa un CSV de ejemplo")
     args = parser.parse_args()
 
     csv_path = args.csv
 
-    # Si se pide sample o el CSV no existe, generar uno de demo
     if args.sample or not Path(csv_path).exists():
         if not args.sample:
             print(f"[AVISO] No se encontró '{csv_path}'. Generando datos de ejemplo...")
-        csv_path = "sample_session.csv"
+
+        csv_path = str(Path(OUTPUT_DIR) / "sample_session.csv")
         generate_sample_csv(csv_path)
 
-    # Pipeline
     print(f"[INFO] Cargando: {csv_path}")
     df = load_csv(csv_path)
+
     print(f"[INFO] Eventos totales cargados: {len(df)}")
 
     df = assign_rooms(df)
@@ -425,11 +429,12 @@ def main():
     metrics   = stress_comparison(metrics, args.safe_room)
 
     print_report(metrics, args.safe_room)
-    plot_metrics(metrics, args.safe_room, args.output)
 
-    # Guardar tabla como CSV auxiliar
-    csv_out = args.output.replace(".png", "_tabla.csv")
+    plot_metrics(metrics, args.safe_room, str(Path(OUTPUT_DIR) / args.output))
+
+    csv_out = str(Path(OUTPUT_DIR) / args.output.replace(".png", "_tabla.csv"))
     metrics.to_csv(csv_out)
+
     print(f"[OK] Tabla de métricas guardada en: {csv_out}")
 
 

@@ -20,6 +20,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from PIL import Image
 
+OUTPUT_DIR = "graficos"
+
 # Formato: [x_min, x_max, z_min, z_max]
 ROOM_BOUNDS = {
     "Room0": [6, 16.6, 0.6, 11],
@@ -149,9 +151,9 @@ if __name__ == "__main__":
         
     df = assign_rooms(df)
 
-    os.makedirs("graficos", exist_ok=True)
+    Path(OUTPUT_DIR).mkdir(exist_ok=True)
 
     map_name = os.path.splitext(os.path.basename(args.map_image))[0]
-    output_file = f"graficos/spatial_heatmap_{map_name}.png"
+    output_file = str(Path(OUTPUT_DIR) / f"spatial_heatmap_{map_name}.png")
 
     plot_spatial_analysis(df, args.room, args.map_image, output_file)

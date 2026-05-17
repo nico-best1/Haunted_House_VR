@@ -1,6 +1,6 @@
 Tener al menos Python 3.8 y windows
 
-1) Ejecutar import_dependencies.bat para crear el entorno virtual e instalar pandas y matplotlib
+1) Ejecutar import_dependencies.bat para crear el entorno virtual e instalar pandas, matplotlib, numpy, seaborn y pillow
 2) Copiar y pegar los archivos csv que genera el juego dentro de la carpeta C:/Usuarios/{Usuario}/AppData/LocalLow/NineandoCorp/Haunted_House_VR a la carpeta metricas_test sin cambiar sus nombres.
-3) Ejecutar Ejecutar_Todo.bat, esto hará que se guarden todos los gráficos generados en la carpeta graficos.
+3) Ejecutar Execute_All.bat, esto hará que se guarden todos los gráficos generados en la carpeta graficos.
 4) Si se quiere generar solo un grafico en concreto, hay un bat con el nombre del tipo de evento correspondiente al grafico deseado.
